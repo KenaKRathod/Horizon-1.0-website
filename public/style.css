@@ -1,0 +1,178 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  position: relative;
+  z-index: 1;
+}
+
+/* Particles background */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  background: #000;
+}
+
+/* Glow text */
+.glow-text {
+  color: #00d4ff;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  animation: glow 2s infinite alternate;
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px rgba(0, 212, 255, 0.5);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.8);
+  }
+}
+
+/* Form-box for event cards hover effect */
+.form-box {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0, 212, 255, 0.2);
+  transition: all 0.3s ease;
+}
+.form-box:hover {
+  transform: rotateX(5deg) rotateY(5deg) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 212, 255, 0.4);
+}
+
+/* Registration button */
+.login-btn {
+  background: #000;
+  border: 1px solid #00d4ff;
+  color: #00d4ff;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.login-btn span {
+  position: relative;
+  z-index: 1;
+}
+.btn-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 212, 255, 0.2),
+    rgba(0, 212, 255, 0.3),
+    transparent
+  );
+  transition: 0.5s;
+}
+.login-btn:hover .btn-glow {
+  left: 100%;
+}
+.login-btn:hover {
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.5),
+    inset 0 0 10px rgba(0, 212, 255, 0.3);
+  transform: scale(1.05);
+}
+/* timeline animation*/
+    @keyframes fade-in-left {
+      0% { opacity: 0; transform: translateX(-40px);}
+      100% { opacity: 1; transform: translateX(0);}
+    }
+    @keyframes fade-in-right {
+      0% { opacity: 0; transform: translateX(40px);}
+      100% { opacity: 1; transform: translateX(0);}
+    }
+    .animate-fade-in-left {
+      animation: fade-in-left 1s both;
+    }
+    .animate-fade-in-right {
+      animation: fade-in-right 1s both;
+    }
+
+/* Mobile view: single column */
+@media (max-width: 767px) {
+  .timeline-card {
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+
+/* Sidebar for Mobile */
+#mobile-sidebar {
+  right: -100%;
+}
+#mobile-sidebar.active {
+  right: 0;
+}
+
+/* Hero Section */
+#home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+
+/* ===== Event Section Styles ===== */
+#event-section {
+  background-color: #0d0d0d;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.event-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4f46e5;
+  margin-bottom: 10px;
+}
+
+.event-subtitle {
+  color: #ccc;
+  margin-bottom: 50px;
+}
+
+.swiper {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background: #111;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
+  transition: transform 0.3s ease;
+  width: 150px;
+  height: 150px;
+}
+
+.swiper-slide img {
+  width: 50%;
+  height: 80%;
+  object-fit: cover;
+}
+
+.event-name {
+  background: #1f1f1f;
+  padding: 10px;
+  font-size: 1.1rem;
+  color: #fff;
+}

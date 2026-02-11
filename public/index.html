@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HORIZON 1.0 - New Dawn to Build Upon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  </head>
+  <body class="font-sans text-white relative overflow-x-hidden">
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-black bg-opacity-60 shadow z-50">
+      <div
+        class="container mx-auto flex justify-between items-center p-4 relative z-10"
+      >
+        <!-- logo block start -->
+        <div class="w-full bg-black text-white p-4 shadow-md">
+          <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <img
+              src="NicePng_until-dawn-logo-png_1421627.png"
+              alt="Horizon Zero Dawn Logo"
+              class="h-10 w-auto"
+              style="filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5))"
+            />
+          </div>
+        </div>
+        <!-- logo block end -->
+
+        <!-- Desktop Links -->
+        <div class="hidden md:flex">
+          <a href="#home" class="mx-2 hover:text-indigo-600">Home</a>
+          <a href="#timeline" class="mx-2 hover:text-indigo-600">Timeline</a>
+          <a href="#events" class="mx-2 hover:text-indigo-600">Events</a>
+          <a href="#faq" class="mx-2 hover:text-indigo-600">FAQ</a>
+          <a href="#contact" class="mx-2 hover:text-indigo-600">Contact</a>
+        </div>
+
+        <!-- Hamburger Button for Mobile -->
+        <div class="md:hidden flex items-center">
+          <button id="hamburger" class="focus:outline-none">
+            <svg
+              class="w-8 h-8 text-indigo-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Sidebar -->
+    <div
+      id="mobile-sidebar"
+      class="fixed top-0 right-[-100%] w-64 h-full bg-black bg-opacity-90 shadow z-50 transition-all duration-300"
+    >
+      <div
+        class="flex justify-between items-center p-4 border-b border-indigo-500"
+      >
+        <div class="text-xl font-bold text-indigo-400">Menu</div>
+        <button id="sidebar-close" class="focus:outline-none">
+          <svg
+            class="w-8 h-8 text-red-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-col mt-6 space-y-4 text-lg ml-4">
+        <a href="#home" class="hover:text-indigo-400">Home</a>
+        <a href="#timeline" class="hover:text-indigo-400">Timeline</a>
+        <a href="#events" class="hover:text-indigo-400">Events</a>
+        <a href="#register" class="hover:text-indigo-400">Register</a>
+        <a href="#contact" class="hover:text-indigo-400">Contact</a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="h-screen flex flex-col justify-center items-center text-center relative z-10 px-4"
+    >
+      <div style="text-align: center">
+        <img
+          src="NicePng_until-dawn-logo-png_1421627.png"
+          alt="Horizon Zero Dawn Logo"
+          style="max-width: 100%; height: auto"
+        />
+      </div>
+      <h3 class="text-4xl md:text-6xl font-bold mb-4 glow-text">
+        “Celebrate IEEE Day 2025!” 🎉
+      </h3>
+      <p class="text-lg md:text-2xl mb-8">
+        “Join us on 14 oct to celebrate IEEE Day! Participate in engaging
+        events, workshops, and fun activities designed to inspire creativity and
+        collaboration. Learn from experts, connect with peers, and be part of
+        the legacy of innovation.”
+      </p>
+      <!-- Registration & Explore Section start -->
+      <section id="register" class="py-0 relative z-10 text-center">
+        <a
+          href="YOUR_GOOGLE_FORM_LINK"
+          target="_blank"
+          class="login-btn relative inline-block px-6 py-3 font-bold rounded"
+        >
+          <span>Register</span>
+          <div class="btn-glow absolute top-0 left-0 w-full h-full"></div>
+        </a>
+        <a
+          href="#timeline"
+          style="margin-left: 20px"
+          class="login-btn relative inline-block px-6 py-3 font-bold rounded"
+        >
+          <span>Explore</span>
+          <div class="btn-glow absolute top-0 left-0 w-full h-full"></div>
+        </a>
+      </section>
+      <!-- Registration & Explore Section end -->
+
+      <div class="countdown flex space-x-6 text-center">
+        <div>
+          <span id="days" class="text-4xl font-bold">00</span>
+          <div>Days</div>
+        </div>
+        <div>
+          <span id="hours" class="text-4xl font-bold">00</span>
+          <div>Hours</div>
+        </div>
+        <div>
+          <span id="minutes" class="text-4xl font-bold">00</span>
+          <div>Minutes</div>
+        </div>
+        <div>
+          <span id="seconds" class="text-4xl font-bold">00</span>
+          <div>Seconds</div>
+        </div>
+      </div>
+    </section>
+    <!-- timeline section start -->
+    <section id="timeline" class="py-16 relative z-10 bg-transparent">
+      <div class="container mx-auto text-center mb-12">
+        <h2 class="text-4xl font-bold text-indigo-400 mb-2">Event Timeline</h2>
+        <p class="text-gray-200">Know what’s happening when!</p>
+      </div>
+      <div class="relative max-w-2xl mx-auto px-2">
+        <!-- Timeline vertical line for desktop -->
+        <div
+          class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-indigo-400 z-0"
+        ></div>
+        <div class="flex flex-col space-y-12">
+          <!-- Treasure Hunt Event Box -->
+          <div class="flex flex-col md:flex-row items-center group">
+            <div class="md:w-1/2 md:pr-8 flex md:justify-end w-full">
+              <div
+                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-left"
+              >
+                <div class="flex items-center mb-2">
+                  <span
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
+                    </svg>
+                  </span>
+                  <h3 class="font-bold text-lg">9:00 AM – 10:30 AM</h3>
+                </div>
+                <p class="font-semibold text-indigo-400 mb-1">Treasure Hunt</p>
+                <ul class="text-sm text-gray-200 ml-1">
+                  <li>10 teams, 4 members each</li>
+                  <li>Location: Across VGEC</li>
+                  <li>Fees: ₹100 per team</li>
+                </ul>
+              </div>
+            </div>
+            <div class="md:w-1/2"></div>
+          </div>
+          <!-- DRDO Seminar Event Box -->
+          <div class="flex flex-col md:flex-row items-center group">
+            <div class="md:w-1/2"></div>
+            <div class="md:w-1/2 md:pl-8 flex md:justify-start w-full">
+              <div
+                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-right"
+              >
+                <div class="flex items-center mb-2">
+                  <span
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 14l9-5-9-5-9 5 9 5z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 14l6.16-3.422A12.083 12.083 0 0121 13.5c0 2.485-2.239 4.5-5 4.5s-5-2.015-5-4.5c0-.828.336-1.579.84-2.078L12 14z"
+                      />
+                    </svg>
+                  </span>
+                  <h3 class="font-bold text-lg">11:00 AM – 1:00 PM</h3>
+                </div>
+                <p class="font-semibold text-indigo-400 mb-1">DRDO Seminar</p>
+                <ul class="text-sm text-gray-200 ml-1">
+                  <li>Venue: J Block Auditorium</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Stalls & Fun Games Event Box -->
+          <div class="flex flex-col md:flex-row items-center group">
+            <div class="md:w-1/2 md:pr-8 flex md:justify-end w-full">
+              <div
+                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-left"
+              >
+                <div class="flex items-center mb-2">
+                  <span
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8 12h8M12 8v8"
+                      />
+                    </svg>
+                  </span>
+                  <h3 class="font-bold text-lg">1:00 PM – 3:00 PM</h3>
+                </div>
+                <p class="font-semibold text-indigo-400 mb-1">
+                  Stalls & Fun Games
+                </p>
+                <ul class="text-sm text-gray-200 ml-1">
+                  <li>Food stalls + Minute-to-Win Games</li>
+                  <li>
+                    Games: Balloon Pop, Paper Plane, Cookie Game, Blind Drawing,
+                    etc.
+                  </li>
+                  <li>Location: M Block</li>
+                </ul>
+              </div>
+            </div>
+            <div class="md:w-1/2"></div>
+          </div>
+          <!-- Talent Show Event Box -->
+          <div class="flex flex-col md:flex-row items-center group">
+            <div class="md:w-1/2"></div>
+            <div class="md:w-1/2 md:pl-8 flex md:justify-start w-full">
+              <div
+                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-right"
+              >
+                <div class="flex items-center mb-2">
+                  <span
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 19V6h13M9 6l-7 7 7 7"
+                      />
+                    </svg>
+                  </span>
+                  <h3 class="font-bold text-lg">1:30 PM – 3:00 PM</h3>
+                </div>
+                <p class="font-semibold text-indigo-400 mb-1">Talent Show</p>
+                <ul class="text-sm text-gray-200 ml-1">
+                  <li>Venue: M Block</li>
+                  <li>Requirements: Red Carpet, Bluetooth Speaker</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Technical Games Event Box -->
+          <div class="flex flex-col md:flex-row items-center group">
+            <div class="md:w-1/2 md:pr-8 flex md:justify-end w-full">
+              <div
+                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-left"
+              >
+                <div class="flex items-center mb-2">
+                  <span
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8 6h.01M16 6h.01M12 10v6"
+                      />
+                    </svg>
+                  </span>
+                  <h3 class="font-bold text-lg">3:15 PM – 4:00 PM</h3>
+                </div>
+                <p class="font-semibold text-indigo-400 mb-1">
+                  Technical Games
+                </p>
+                <ul class="text-sm text-gray-200 ml-1">
+                  <li>Logo Quiz, Binary Bingo, Tech Pictionary</li>
+                  <li>Venue: M104 & M106</li>
+                </ul>
+              </div>
+            </div>
+            <div class="md:w-1/2"></div>
+          </div>
+          <!-- Jamming Session Event Box -->
+          <div class="flex flex-col md:flex-row items-center group">
+            <div class="md:w-1/2"></div>
+            <div class="md:w-1/2 md:pl-8 flex md:justify-start w-full">
+              <div
+                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-right"
+              >
+                <div class="flex items-center mb-2">
+                  <span
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 19V6h13M9 6l-7 7 7 7"
+                      />
+                    </svg>
+                  </span>
+                  <h3 class="font-bold text-lg">4:00 PM – 4:30 PM</h3>
+                </div>
+                <p class="font-semibold text-indigo-400 mb-1">
+                  Jamming Session
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Garba Event Box -->
+          <div class="flex flex-col md:flex-row items-center group">
+            <div class="md:w-1/2 md:pr-8 flex md:justify-end w-full">
+              <div
+                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-left"
+              >
+                <div class="flex items-center mb-2">
+                  <span
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 8v4l3 3"
+                      />
+                    </svg>
+                  </span>
+                  <h3 class="font-bold text-lg">4:30 PM – 5:30 PM</h3>
+                </div>
+                <p class="font-semibold text-indigo-400 mb-1">Garba</p>
+                <ul class="text-sm text-gray-200 ml-1">
+                  <li>Venue: L Block</li>
+                  <li>
+                    Requirements: Speaker System, 2 Mics, Cleaning of Block
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="md:w-1/2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+   <!-- ===== Event Section Start ===== -->
+<section id="event-section">
+  <h2 class="event-title">Our Events</h2>
+  <p class="event-subtitle">Explore our exciting activities and programs</p>
+
+  <!-- Swiper Container -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="1[1].jpg" alt="Event 3" />
+        <h3 class="event-name">Hackathon</h3>
+      </div>
+      <div class="swiper-slide">
+        <img src="1[1].jpg" alt="Event 4" />
+        <h3 class="event-name">Project Expo</h3>
+      </div>
+      <div class="swiper-slide">
+        <img src="1[1].jpg" alt="Event 5" />
+        <h3 class="event-name">Workshop</h3>
+      </div>
+      <div class="swiper-slide">
+        <img src="1[1].jpg" alt="Event 5" />
+        <h3 class="event-name">Garba</h3>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+<!-- ===== Event Section End ===== -->
+
+    <!-- Events Section End -->
+    <!-- FAQ Section Start -->
+    <section id="faq" class="py-16 relative z-10 text-center">
+      <h2 class="text-4xl font-bold mb-6 glow-text text-indigo-400">FAQ</h2>
+      <div class="max-w-2xl mx-auto space-y-4">
+        <div
+          class="faq-item bg-black bg-opacity-60 rounded-lg p-6 border border-indigo-400 text-left shadow-lg"
+        >
+          <button
+            class="faq-question flex justify-between items-center w-full font-semibold text-lg text-indigo-300 focus:outline-none"
+          >
+            What is IEEE Day?
+            <span class="faq-toggle text-indigo-400 text-2xl">+</span>
+          </button>
+          <div class="faq-answer mt-2 text-gray-200 hidden">
+            IEEE Day celebrates the first time in history when engineers
+            worldwide and IEEE members gathered to share their technical ideas
+            in 1884.
+          </div>
+        </div>
+        <div
+          class="faq-item bg-black bg-opacity-60 rounded-lg p-6 border border-indigo-400 text-left shadow-lg"
+        >
+          <button
+            class="faq-question flex justify-between items-center w-full font-semibold text-lg text-indigo-300 focus:outline-none"
+          >
+            Who can participate in the events?
+            <span class="faq-toggle text-indigo-400 text-2xl">+</span>
+          </button>
+          <div class="faq-answer mt-2 text-gray-200 hidden">
+            All students of VGEC can participate. Some events may have team or
+            individual requirements.
+          </div>
+        </div>
+        <div
+          class="faq-item bg-black bg-opacity-60 rounded-lg p-6 border border-indigo-400 text-left shadow-lg"
+        >
+          <button
+            class="faq-question flex justify-between items-center w-full font-semibold text-lg text-indigo-300 focus:outline-none"
+          >
+            How do I register?
+            <span class="faq-toggle text-indigo-400 text-2xl">+</span>
+          </button>
+          <div class="faq-answer mt-2 text-gray-200 hidden">
+            Click on the "Register" button above and fill out the Google Form to
+            secure your spot.
+          </div>
+        </div>
+        <div
+          class="faq-item bg-black bg-opacity-60 rounded-lg p-6 border border-indigo-400 text-left shadow-lg"
+        >
+          <button
+            class="faq-question flex justify-between items-center w-full font-semibold text-lg text-indigo-300 focus:outline-none"
+          >
+            Is there any participation fee?
+            <span class="faq-toggle text-indigo-400 text-2xl">+</span>
+          </button>
+          <div class="faq-answer mt-2 text-gray-200 hidden">
+            Some events have a nominal fee (e.g., Treasure Hunt: ₹100 per team).
+            Most activities are free.
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section End -->
+
+    <!-- Registration Section start -->
+    <section id="register" class="py-16 relative z-10 text-center">
+      <h2 class="text-4xl font-bold mb-4 glow-text">Register Now</h2>
+      <p class="mb-6">Secure your spot by registering here.</p>
+      <a
+        href="YOUR_GOOGLE_FORM_LINK"
+        target="_blank"
+        class="login-btn relative inline-block px-6 py-3 font-bold rounded"
+      >
+        <span>Register</span>
+        <div class="btn-glow absolute top-0 left-0 w-full h-full"></div>
+      </a>
+    </section>
+    <!-- Registration Section end -->
+    <!-- Footer Start-->
+    <footer class="bg-black bg-opacity-80 text-gray-300 relative z-10">
+      <div
+        class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-12"
+      >
+        <!-- Left Section -->
+        <div>
+          <h2 class="text-2xl font-bold mb-4 text-white">HORIZON 1.0</h2>
+          <p class="mb-6">
+            The ultimate IEEE Day celebration with innovation, fun, and
+            collaboration.
+          </p>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-indigo-600 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M7.75 2C4.678 2 2 4.678 2 7.75v8.5C2 19.322 4.678 22 7.75 22h8.5c3.072 0 5.75-2.678 5.75-5.75v-8.5C22 4.678 19.322 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0120 7.75v8.5A3.75 3.75 0 0116.25 20h-8.5A3.75 3.75 0 014 16.25v-8.5A3.75 3.75 0 017.75 4zm8.75 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"
+                />
+              </svg>
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-indigo-600 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h7v-9h-3v-3h3v-2c0-3.084 1.917-4.763 4.713-4.763 1.34 0 2.492.099 2.828.144v3.28h-1.942c-1.524 0-1.818.724-1.818 1.785v2.554h3.633l-.474 3h-3.159v9h6.219c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Middle Section -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-white">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#home" class="hover:text-indigo-400 transition">Home</a>
+            </li>
+            <li>
+              <a href="#timeline" class="hover:text-indigo-400 transition"
+                >Timeline</a
+              >
+            </li>
+            <li>
+              <a href="#events" class="hover:text-indigo-400 transition"
+                >Events</a
+              >
+            </li>
+            <li>
+              <a href="#faq" class="hover:text-indigo-400 transition">FAQ</a>
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-indigo-400 transition"
+                >Contact</a
+              >
+            </li>
+            <li>
+              <a href="#register" class="hover:text-indigo-400 transition"
+                >Register</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Section -->
+        <div>
+          <h3 class="text-xl font-bold mb-4 text-white">Contact</h3>
+          <p class="flex items-center mb-2">
+            <svg
+              class="w-5 h-5 text-red-500 mr-2"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M16 12H8m0 0V8m0 4v4" />
+            </svg>
+            mohitvanzara32@gmail.com
+          </p>
+          <p class="flex items-center mb-2">
+            <svg
+              class="w-5 h-5 text-red-500 mr-2"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 5h2l3.6 7.59a1 1 0 00.92.41h7.02a1 1 0 00.92-.41L21 5H3z"
+              />
+            </svg>
+            +91 9313046084
+          </p>
+          <p class="flex items-center">
+            <svg
+              class="w-5 h-5 text-red-500 mr-2"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M17.657 16.657L13.414 12.414A2 2 0 0012 12h0a2 2 0 00-1.414.586L6.343 16.657M12 22v-10"
+              />
+            </svg>
+            Vishwakarma Govt. Engg. College, Chandkheda, Gujarat
+          </p>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-700 text-center py-4">
+        <p class="text-sm">&copy; 2025 HORIZON 1.0 | All rights reserved.</p>
+        <p class="mt-2">
+          <span class="text-red-500 font-bold">Innovate.</span>
+          <span class="text-indigo-400 font-bold"> Create.</span>
+          <span class="text-blue-500 font-bold"> Dominate.</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Footer End -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
