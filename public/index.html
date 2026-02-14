@@ -1,146 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HORIZON 1.0 - New Dawn to Build Upon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  </head>
+  <body class="font-sans text-white relative overflow-x-hidden">
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HORIZON 1.0 - New Dawn to Build Upon</title>
-  <!-- Google Fonts for Team Section -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-</head>
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-black bg-opacity-60 shadow z-50">
+  <div class="w-full flex justify-between items-center px-8 py-4">
 
-<body class="font-sans text-white relative overflow-x-hidden">
-  <!-- Particles Background -->
-  <div id="particles-js"></div>
+    <!-- Logo -->
+    <img
+      src="./Horizon 1.0 New dawn.jpeg"
+      alt="Horizon Logo"
+      class="h-10 w-auto"
+      style="filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));"
+    />
 
-  <!-- Navbar -->
-  <nav class="fixed w-full bg-black bg-opacity-60 shadow z-50">
-    <div class="w-full flex justify-between items-center px-8 py-4">
-
-      <!-- Logo -->
-      <img src="./Horizon 1.0 New dawn.jpeg" alt="Horizon Logo" class="h-10 w-auto"
-        style="filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));" />
-
-      <!-- Desktop Links -->
-      <div class="hidden md:flex">
-        <a href="#home" class="mx-2 hover:text-indigo-600">Home</a>
-        <a href="#timeline" class="mx-2 hover:text-indigo-600">Timeline</a>
-        <a href="#events" class="mx-2 hover:text-indigo-600">Events</a>
-        <a href="#faq" class="mx-2 hover:text-indigo-600">FAQ</a>
-        <a href="#contact" class="mx-2 hover:text-indigo-600">Contact</a>
-      </div>
-
+    <!-- Desktop Links -->
+    <div class="hidden md:flex">
+      <a href="#home" class="mx-2 hover:text-indigo-600">Home</a>
+      <a href="#timeline" class="mx-2 hover:text-indigo-600">Timeline</a>
+      <a href="#events" class="mx-2 hover:text-indigo-600">Events</a>
+      <a href="#faq" class="mx-2 hover:text-indigo-600">FAQ</a>
+      <a href="#contact" class="mx-2 hover:text-indigo-600">Contact</a>
     </div>
-  </nav>
 
-  <!-- Mobile Sidebar -->
-  <div id="mobile-sidebar"
-    class="fixed top-0 right-[-100%] w-64 h-full bg-black bg-opacity-90 shadow z-50 transition-all duration-300">
-    <div class="flex justify-between items-center p-4 border-b border-indigo-500">
-      <div class="text-xl font-bold text-indigo-400">Menu</div>
-      <button id="sidebar-close" class="focus:outline-none">
-        <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-        </svg>
-      </button>
-    </div>
-    <div class="flex flex-col mt-6 space-y-4 text-lg ml-4">
-      <a href="#home" class="hover:text-indigo-400">Home</a>
-      <a href="#timeline" class="hover:text-indigo-400">Timeline</a>
-      <a href="#events" class="hover:text-indigo-400">Events</a>
-      <a href="#register" class="hover:text-indigo-400">Register</a>
-      <a href="#contact" class="hover:text-indigo-400">Contact</a>
-    </div>
   </div>
+</nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="min-screen flex flex-col justify-center items-center text-center relative z-10 px-4">
-    <div style="text-align: center">
-      <img src="NicePng_until-dawn-logo-png_1421627.png" alt="Horizon Zero Dawn Logo"
-        style="max-width: 100%; height: auto" />
-    </div>
-    <h3 class="text-4xl md:text-6xl font-bold mb-4 glow-text">
-      “Celebrate IEEE Fest 2026!”
-    </h3>
-    <p class="text-lg md:text-2xl mb-8">
-      “Join us on 20th Feb! Participate in engaging
-      events, workshops, and fun activities designed to inspire creativity and
-      collaboration. Learn from experts, connect with peers, and be part of
-      the legacy of innovation.”
-    </p>
-    <!-- Registration & Explore Section start -->
-    <section id="register-section" class="py-0 relative z-10 text-center">
-      <a href="YOUR_GOOGLE_FORM_LINK" target="_blank"
-        class="login-btn relative inline-block px-6 py-3 font-bold rounded">
-        <span>Register</span>
-        <div class="btn-glow absolute top-0 left-0 w-full h-full"></div>
-      </a>
-      <a href="#timeline" style="margin-left: 20px" class="login-btn relative inline-block px-6 py-3 font-bold rounded">
-        <span>Explore</span>
-        <div class="btn-glow absolute top-0 left-0 w-full h-full"></div>
-      </a>
-    </section>
-    <!-- Registration & Explore Section end -->
-
-    <!-- Countdown Section -->
-    <section class="countdown-section">
-      <div class="countdown-container">
-
-        <div class="time-card">
-          <svg class="progress-ring" width="140" height="140">
-            <circle class="progress-bg" cx="70" cy="70" r="60" />
-            <circle class="progress-circle" id="days-circle" cx="70" cy="70" r="60" />
+    <!-- Mobile Sidebar -->
+    <div
+      id="mobile-sidebar"
+      class="fixed top-0 right-[-100%] w-64 h-full bg-black bg-opacity-90 shadow z-50 transition-all duration-300"
+    >
+      <div
+        class="flex justify-between items-center p-4 border-b border-indigo-500"
+      >
+        <div class="text-xl font-bold text-indigo-400">Menu</div>
+        <button id="sidebar-close" class="focus:outline-none">
+          <svg
+            class="w-8 h-8 text-red-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
           </svg>
-          <div class="time-content">
-            <h2 id="days">00</h2>
-            <p>Days</p>
-          </div>
-        </div>
-
-        <div class="time-card">
-          <svg class="progress-ring" width="140" height="140">
-            <circle class="progress-bg" cx="70" cy="70" r="60" />
-            <circle class="progress-circle" id="hours-circle" cx="70" cy="70" r="60" />
-          </svg>
-          <div class="time-content">
-            <h2 id="hours">00</h2>
-            <p>Hours</p>
-          </div>
-        </div>
-
-        <div class="time-card">
-          <svg class="progress-ring" width="140" height="140">
-            <circle class="progress-bg" cx="70" cy="70" r="60" />
-            <circle class="progress-circle" id="minutes-circle" cx="70" cy="70" r="60" />
-          </svg>
-          <div class="time-content">
-            <h2 id="minutes">00</h2>
-            <p>Minutes</p>
-          </div>
-        </div>
-
-        <div class="time-card">
-          <svg class="progress-ring" width="140" height="140">
-            <circle class="progress-bg" cx="70" cy="70" r="60" />
-            <circle class="progress-circle" id="seconds-circle" cx="70" cy="70" r="60" />
-          </svg>
-          <div class="time-content">
-            <h2 id="seconds">00</h2>
-            <p>Seconds</p>
-          </div>
-        </div>
-
+        </button>
       </div>
-    </section>
+      <div class="flex flex-col mt-6 space-y-4 text-lg ml-4">
+        <a href="#home" class="hover:text-indigo-400">Home</a>
+        <a href="#timeline" class="hover:text-indigo-400">Timeline</a>
+        <a href="#events" class="hover:text-indigo-400">Events</a>
+        <a href="#register" class="hover:text-indigo-400">Register</a>
+        <a href="#contact" class="hover:text-indigo-400">Contact</a>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-screen flex flex-col justify-center items-center text-center relative z-10 px-4"
+    >
+      <div style="text-align: center">
+        <img
+          src="NicePng_until-dawn-logo-png_1421627.png"
+          alt="Horizon Zero Dawn Logo"
+          style="max-width: 100%; height: auto"
+        />
+      </div>
+      <h3 class="text-4xl md:text-6xl font-bold mb-4 glow-text">
+        “Celebrate IEEE Fest 2026!” 
+      </h3>
+      <p class="text-lg md:text-2xl mb-8">
+        “Join us on 20th Feb! Participate in engaging
+        events, workshops, and fun activities designed to inspire creativity and
+        collaboration. Learn from experts, connect with peers, and be part of
+        the legacy of innovation.”
+      </p>
+      <!-- Registration & Explore Section start -->
+      <section id="register-section" class="py-0 relative z-10 text-center">
+        <a
+          href="YOUR_GOOGLE_FORM_LINK"
+          target="_blank"
+          class="login-btn relative inline-block px-6 py-3 font-bold rounded"
+        >
+          <span>Register</span>
+          <div class="btn-glow absolute top-0 left-0 w-full h-full"></div>
+        </a>
+        <a
+          href="#timeline"
+          style="margin-left: 20px"
+          class="login-btn relative inline-block px-6 py-3 font-bold rounded"
+        >
+          <span>Explore</span>
+          <div class="btn-glow absolute top-0 left-0 w-full h-full"></div>
+        </a>
+      </section>
+      <!-- Registration & Explore Section end -->
+
+      <!-- Countdown Section -->
+<section class="countdown-section">
+  <div class="countdown-container">
+
+    <div class="time-card">
+      <svg class="progress-ring" width="140" height="140">
+        <circle class="progress-bg" cx="70" cy="70" r="60"/>
+        <circle class="progress-circle" id="days-circle" cx="70" cy="70" r="60"/>
+      </svg>
+      <div class="time-content">
+        <h2 id="days">00</h2>
+        <p>Days</p>
+      </div>
+    </div>
+
+    <div class="time-card">
+      <svg class="progress-ring" width="140" height="140">
+        <circle class="progress-bg" cx="70" cy="70" r="60"/>
+        <circle class="progress-circle" id="hours-circle" cx="70" cy="70" r="60"/>
+      </svg>
+      <div class="time-content">
+        <h2 id="hours">00</h2>
+        <p>Hours</p>
+      </div>
+    </div>
+
+    <div class="time-card">
+      <svg class="progress-ring" width="140" height="140">
+        <circle class="progress-bg" cx="70" cy="70" r="60"/>
+        <circle class="progress-circle" id="minutes-circle" cx="70" cy="70" r="60"/>
+      </svg>
+      <div class="time-content">
+        <h2 id="minutes">00</h2>
+        <p>Minutes</p>
+      </div>
+    </div>
+
+    <div class="time-card">
+      <svg class="progress-ring" width="140" height="140">
+        <circle class="progress-bg" cx="70" cy="70" r="60"/>
+        <circle class="progress-circle" id="seconds-circle" cx="70" cy="70" r="60"/>
+      </svg>
+      <div class="time-content">
+        <h2 id="seconds">00</h2>
+        <p>Seconds</p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
     <!-- timeline section start -->
@@ -151,18 +180,32 @@
       </div>
       <div class="relative w-full max-w-2xl mx-auto px-4">
         <!-- Timeline vertical line for desktop -->
-        <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-indigo-400 z-0"></div>
+        <div
+          class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-indigo-400 z-0"
+        ></div>
         <div class="flex flex-col space-y-12">
           <!-- Treasure Hunt Event Box -->
           <div class="flex flex-col md:flex-row items-center group">
             <div class="md:w-1/2 md:pr-8 flex md:justify-end w-full">
               <div
-                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-left">
+                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-left"
+              >
                 <div class="flex items-center mb-2">
-                  <span class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  <span
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
                     </svg>
                   </span>
                   <h3 class="font-bold text-lg">9:00 AM – 10:30 AM</h3>
@@ -182,13 +225,29 @@
             <div class="md:w-1/2"></div>
             <div class="md:w-1/2 md:pl-8 flex md:justify-start w-full">
               <div
-                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-right">
+                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-right"
+              >
                 <div class="flex items-center mb-2">
-                  <span class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
-                      <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M12 14l6.16-3.422A12.083 12.083 0 0121 13.5c0 2.485-2.239 4.5-5 4.5s-5-2.015-5-4.5c0-.828.336-1.579.84-2.078L12 14z" />
+                  <span
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 14l9-5-9-5-9 5 9 5z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 14l6.16-3.422A12.083 12.083 0 0121 13.5c0 2.485-2.239 4.5-5 4.5s-5-2.015-5-4.5c0-.828.336-1.579.84-2.078L12 14z"
+                      />
                     </svg>
                   </span>
                   <h3 class="font-bold text-lg">11:00 AM – 1:00 PM</h3>
@@ -204,12 +263,25 @@
           <div class="flex flex-col md:flex-row items-center group">
             <div class="md:w-1/2 md:pr-8 flex md:justify-end w-full">
               <div
-                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-left">
+                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-left"
+              >
                 <div class="flex items-center mb-2">
-                  <span class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <span
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
                       <circle cx="12" cy="12" r="10" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h8M12 8v8" />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8 12h8M12 8v8"
+                      />
                     </svg>
                   </span>
                   <h3 class="font-bold text-lg">1:00 PM – 3:00 PM</h3>
@@ -234,11 +306,24 @@
             <div class="md:w-1/2"></div>
             <div class="md:w-1/2 md:pl-8 flex md:justify-start w-full">
               <div
-                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-right">
+                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-right"
+              >
                 <div class="flex items-center mb-2">
-                  <span class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6h13M9 6l-7 7 7 7" />
+                  <span
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 19V6h13M9 6l-7 7 7 7"
+                      />
                     </svg>
                   </span>
                   <h3 class="font-bold text-lg">1:30 PM – 3:00 PM</h3>
@@ -255,12 +340,25 @@
           <div class="flex flex-col md:flex-row items-center group">
             <div class="md:w-1/2 md:pr-8 flex md:justify-end w-full">
               <div
-                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-left">
+                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-left"
+              >
                 <div class="flex items-center mb-2">
-                  <span class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <span
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
                       <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 6h.01M16 6h.01M12 10v6" />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M8 6h.01M16 6h.01M12 10v6"
+                      />
                     </svg>
                   </span>
                   <h3 class="font-bold text-lg">3:15 PM – 4:00 PM</h3>
@@ -281,11 +379,24 @@
             <div class="md:w-1/2"></div>
             <div class="md:w-1/2 md:pl-8 flex md:justify-start w-full">
               <div
-                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-right">
+                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-right"
+              >
                 <div class="flex items-center mb-2">
-                  <span class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6h13M9 6l-7 7 7 7" />
+                  <span
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M9 19V6h13M9 6l-7 7 7 7"
+                      />
                     </svg>
                   </span>
                   <h3 class="font-bold text-lg">4:00 PM – 4:30 PM</h3>
@@ -300,12 +411,25 @@
           <div class="flex flex-col md:flex-row items-center group">
             <div class="md:w-1/2 md:pr-8 flex md:justify-end w-full">
               <div
-                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-left">
+                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-left"
+              >
                 <div class="flex items-center mb-2">
-                  <span class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <span
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
+                  >
+                    <svg
+                      class="h-6 w-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                    >
                       <circle cx="12" cy="12" r="10" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3" />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M12 8v4l3 3"
+                      />
                     </svg>
                   </span>
                   <h3 class="font-bold text-lg">4:30 PM – 5:30 PM</h3>
@@ -326,336 +450,114 @@
     </section>
 
     <!-- Events Section -->
-    <!-- ===== Event Section Start ===== -->
-    <section id="event-section">
-      <h2 class="event-title">Our Events</h2>
-      <p class="event-subtitle">Explore our exciting activities and programs</p>
+   <!-- ===== Event Section Start ===== -->
+<section id="event-section">
+  <h2 class="event-title">Our Events</h2>
+  <p class="event-subtitle">Explore our exciting activities and programs</p>
 
-      <!-- Swiper Container -->
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="1[1].jpg" alt="Event 3" />
-            <h3 class="event-name">Hackathon</h3>
-          </div>
-          <div class="swiper-slide">
-            <img src="1[1].jpg" alt="Event 4" />
-            <h3 class="event-name">Project Expo</h3>
-          </div>
-          <div class="swiper-slide">
-            <img src="1[1].jpg" alt="Event 5" />
-            <h3 class="event-name">Workshop</h3>
-          </div>
-          <div class="swiper-slide">
-            <img src="1[1].jpg" alt="Event 5" />
-            <h3 class="event-name">Garba</h3>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
+  <!-- Swiper Container -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="1[1].jpg" alt="Event 3" />
+        <h3 class="event-name">Hackathon</h3>
       </div>
-    </section>
-    <!-- ===== Event Section End ===== -->
+      <div class="swiper-slide">
+        <img src="1[1].jpg" alt="Event 4" />
+        <h3 class="event-name">Project Expo</h3>
+      </div>
+      <div class="swiper-slide">
+        <img src="1[1].jpg" alt="Event 5" />
+        <h3 class="event-name">Workshop</h3>
+      </div>
+      <div class="swiper-slide">
+        <img src="1[1].jpg" alt="Event 5" />
+        <h3 class="event-name">Garba</h3>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+<!-- ===== Event Section End ===== -->
 
     <!-- Events Section End -->
+    <!-- FAQ Section Start -->
+<section id="faq" class="py-16 relative z-10 text-center">
+  <h2 class="text-4xl font-bold mb-6 glow-text text-indigo-400">FAQ</h2>
 
-    <!-- Team Committee Section Start -->
-    <section id="team" class="py-16 relative z-10 bg-transparent overflow-hidden">
-      <div class="container mx-auto px-4 h-full">
-        <div class="flex flex-col md:flex-row items-center justify-center h-full gap-12">
+  <div class="max-w-2xl mx-auto space-y-6">
 
-          <!-- Left Side: Typography -->
-          <div class="w-full md:w-1/2 text-left z-20">
-            <h2 class="text-6xl md:text-8xl text-white tracking-wide leading-tight">
-              MEET<br>
-              <span class="italic text-gray-400 font-light">OUR</span><br>
-              TEAM
-            </h2>
-            <div class="mt-8">
-              <h3 class="text-3xl text-white" id="team-member-name">Member Name</h3>
-              <div class="flex gap-2 mt-2">
-                <span class="px-3 py-1 rounded-full border border-gray-500 text-sm text-gray-300"
-                  id="team-member-role">ROLE</span>
-              </div>
-            </div>
-            <div class="mt-8 flex gap-4">
-              <div
-                class="team-nav-btn team-prev cursor-pointer border border-gray-500 rounded-full p-3 hover:bg-white hover:text-black transition">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
-                </svg>
-              </div>
-              <div
-                class="team-nav-btn team-next cursor-pointer border border-gray-500 rounded-full p-3 hover:bg-white hover:text-black transition">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Side: Swiper Slider -->
-          <div class="w-full md:w-1/2 h-[500px] relative">
-            <div class="swiper teamSwiper h-full w-full">
-              <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide team-slide cursor-pointer" data-name="Carolyn Severson" data-role="Chairperson"
-                  data-image="1[1].jpg"
-                  data-bio="Carolyn is a visionary leader with over 10 years of experience in organizing large-scale tech events. She is passionate about fostering innovation and collaboration within the student community."
-                  data-experience="10" data-projects="15" data-rating="4.9">
-                  <img src="1[1].jpg" alt="Team Member 1"
-                    class="w-full h-full object-cover rounded-lg shadow-2xl pointer-events-none">
-                </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide team-slide cursor-pointer" data-name="Dr. Smith" data-role="Vice Chair"
-                  data-image="1[1].jpg"
-                  data-bio="Dr. Smith specializes in Artificial Intelligence and has guided numerous research projects. He brings a wealth of technical knowledge and academic rigorousness to the committee."
-                  data-experience="8" data-projects="22" data-rating="4.8">
-                  <img src="1[1].jpg" alt="Team Member 2"
-                    class="w-full h-full object-cover rounded-lg shadow-2xl pointer-events-none">
-                </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide team-slide cursor-pointer" data-name="Jane Doe" data-role="Secretary"
-                  data-image="1[1].jpg"
-                  data-bio="Jane is the organizational backbone of the team, ensuring smooth communication and efficient workflow. Her attention to detail is unmatched."
-                  data-experience="5" data-projects="12" data-rating="4.7">
-                  <img src="1[1].jpg" alt="Team Member 3"
-                    class="w-full h-full object-cover rounded-lg shadow-2xl pointer-events-none">
-                </div>
-                <!-- Slide 4 -->
-                <div class="swiper-slide team-slide cursor-pointer" data-name="John Doe" data-role="Treasurer"
-                  data-image="1[1].jpg"
-                  data-bio="John manages the finances with precision and integrity. He has a background in financial planning and ensures resources are allocated effectively."
-                  data-experience="4" data-projects="08" data-rating="4.6">
-                  <img src="1[1].jpg" alt="Team Member 4"
-                    class="w-full h-full object-cover rounded-lg shadow-2xl pointer-events-none">
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!-- Team Committee Section End -->
-
-    <!-- Team Member Details Modal -->
-    <div id="team-modal" class="fixed inset-0 z-[100] hidden opacity-0 transition-opacity duration-500">
-      <!-- Backdrop -->
-      <div class="absolute inset-0 bg-black bg-opacity-80 backdrop-blur-sm" id="modal-backdrop"></div>
-
-      <!-- Modal Content -->
-      <div class="absolute inset-0 flex items-center justify-center p-4 md:p-8 pointer-events-none">
-        <div
-          class="bg-[#f0f0e6] w-full h-full max-w-7xl max-h-[90vh] rounded-[40px] overflow-hidden shadow-2xl flex flex-col md:flex-row pointer-events-auto transform scale-95 transition-transform duration-500"
-          id="modal-content">
-
-          <!-- Close Button -->
-          <button id="modal-close"
-            class="absolute top-6 right-8 z-50 text-gray-800 hover:text-black transition transform hover:rotate-90">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-10 h-10">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-
-          <!-- Left Side: Image -->
-          <div class="w-full md:w-1/2 h-1/2 md:h-full relative bg-gray-200" id="modal-img-container">
-            <img id="modal-img" src="" alt="Team Member" class="w-full h-full object-cover object-center">
-          </div>
-
-          <!-- Right Side: Info -->
-          <div
-            class="w-full md:w-1/2 h-1/2 md:h-full bg-[#dnd9cd] flex flex-col justify-center p-8 md:p-16 relative nav-bg-pattern">
-
-            <!-- Badge -->
-            <!-- <div class="absolute top-8 right-8 md:top-16 md:right-16 animate-spin-slow hidden md:block modal-element">
-              <svg viewBox="0 0 100 100" width="120" height="120">
-                <path id="curve" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
-                <text width="100">
-                  <textPath xlink:href="#curve" fill="#555" text-anchor="middle" startOffset="50%"
-                    class="text-[10px] tracking-widest uppercase font-bold">
-                    • Connect • Collaborate • Create
-                  </textPath>
-                </text>
-              </svg>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#555"
-                  class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-                </svg>
-              </div>
-            </div> -->
-
-            <div class="mb-2 modal-element" id="modal-role-badge">
-              <span
-                class="inline-block px-4 py-1 rounded-full border border-gray-600 text-gray-700 text-sm font-semibold uppercase tracking-wider"
-                id="modal-role">Role</span>
-            </div>
-
-            <h2 class="text-5xl md:text-7xl text-gray-900 mb-6 leading-tight modal-element" id="modal-name">
-              Member Name
-            </h2>
-
-            <p class="text-gray-700 text-lg md:text-xl leading-relaxed mb-12 max-w-md modal-element" id="modal-bio">
-              Bio description goes here.
-            </p>
-
-            <!-- Stats -->
-            <!-- <div class="flex gap-12 mt-auto border-t border-gray-400 pt-8 modal-element" id="modal-stats">
-              <div>
-                <p class="text-4xl md:text-5xl text-gray-900" id="modal-experience">0</p>
-                <p class="text-sm text-gray-600 uppercase tracking-wide mt-1">Years Exp.</p>
-              </div>
-              <div>
-                <p class="text-4xl md:text-5xl text-gray-900" id="modal-projects">0</p>
-                <p class="text-sm text-gray-600 uppercase tracking-wide mt-1">Projects</p>
-              </div>
-              <div>
-                <p class="text-4xl md:text-5xl text-gray-900" id="modal-rating">0.0</p>
-                <p class="text-sm text-gray-600 uppercase tracking-wide mt-1">Rating</p>
-              </div>
-            </div> -->
-
-          </div>
-        </div>
+    <!-- Participation Fee -->
+    <div class="faq-item">
+      <button class="faq-question">
+        What is the participation fee?
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-answer">
+        Some events have a nominal participation fee (e.g., Treasure Hunt: ₹100 per team).
+        Most IEEE Fest activities are free.
       </div>
     </div>
 
-    <!-- ===== Prizes & Benefits Section Start ===== -->
-<section id="prizes" class="py-20 relative z-10 text-center">
-  <h2 class="text-4xl font-bold mb-4 glow-text text-indigo-400">
-    Prizes & Benefits
-  </h2>
-  <p class="text-gray-300 mb-12">
-    Compete. Win. Get Recognized.
-  </p>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-8">
-
-    <!-- Winner -->
-    <div class="prize-card p-6 rounded-xl">
-      <div class="text-5xl mb-4 text-yellow-400">
-        <i class="fas fa-trophy"></i>
+    <!-- Games -->
+    <div class="faq-item">
+      <button class="faq-question">
+        What are the games in the IEEE Fest?
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-answer">
+        Games include Treasure Hunt, Logo Quiz, Binary Bingo, Tech Pictionary,
+        Balloon Pop, Paper Plane Challenge, Cookie Game, Blind Drawing and more.
       </div>
-      <h3 class="text-xl font-bold mb-2">Winner</h3>
-      <p class="text-gray-300 text-sm">
-        Cash Prize + Trophy + Certificate + Recognition on IEEE Platforms
-      </p>
     </div>
 
-    <!-- Runner Up -->
-    <div class="prize-card p-6 rounded-xl">
-      <div class="text-5xl mb-4 text-gray-300">
-        <i class="fas fa-medal"></i>
+    <!-- Prizes -->
+    <div class="faq-item">
+      <button class="faq-question">
+        What are the prizes and benefits?
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-answer">
+        Winners receive exciting prizes, certificates, and recognition.
+        Participants gain networking opportunities and technical exposure.
       </div>
-      <h3 class="text-xl font-bold mb-2">Runner-Up</h3>
-      <p class="text-gray-300 text-sm">
-        Cash Prize + Certificate + Special Mention
-      </p>
     </div>
 
-    <!-- Special Mentions -->
-    <div class="prize-card p-6 rounded-xl">
-      <div class="text-5xl mb-4 text-pink-400">
-        <i class="fas fa-star"></i>
+    <!-- Register -->
+    <div class="faq-item">
+      <button class="faq-question">
+        How do I register?
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-answer">
+        Click on the "Register" button above and fill out the Google Form.
       </div>
-      <h3 class="text-xl font-bold mb-2">Special Mentions</h3>
-      <p class="text-gray-300 text-sm">
-        Exciting Goodies + Certificate of Excellence
-      </p>
     </div>
 
-    <!-- Participation -->
-    <div class="prize-card p-6 rounded-xl">
-      <div class="text-5xl mb-4 text-cyan-400">
-        <i class="fas fa-certificate"></i>
+    <!-- Who can participate -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Who can participate?
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-answer">
+        All VGEC students can participate. Some events may have team or individual rules.
       </div>
-      <h3 class="text-xl font-bold mb-2">All Participants</h3>
-      <p class="text-gray-300 text-sm">
-        Participation Certificate + Networking + Exposure
-      </p>
     </div>
 
   </div>
 </section>
-<!-- ===== Prizes & Benefits Section End ===== -->
-
-
-    <section id="faq" class="py-16 relative z-10 text-center">
-      <h2 class="text-4xl font-bold mb-6 glow-text text-indigo-400">FAQ</h2>
-
-      <div class="max-w-2xl mx-auto space-y-6">
-
-        <!-- Participation Fee -->
-        <div class="faq-item">
-          <button class="faq-question">
-            What is the participation fee?
-            <span class="faq-toggle">+</span>
-          </button>
-          <div class="faq-answer">
-            Some events have a nominal participation fee (e.g., Treasure Hunt: ₹100 per team).
-            Most IEEE Fest activities are free.
-          </div>
-        </div>
-
-        <!-- Games -->
-        <div class="faq-item">
-          <button class="faq-question">
-            What are the games in the IEEE Fest?
-            <span class="faq-toggle">+</span>
-          </button>
-          <div class="faq-answer">
-            Games include Treasure Hunt, Logo Quiz, Binary Bingo, Tech Pictionary,
-            Balloon Pop, Paper Plane Challenge, Cookie Game, Blind Drawing and more.
-          </div>
-        </div>
-
-        <!-- Prizes -->
-        <div class="faq-item">
-          <button class="faq-question">
-            What are the prizes and benefits?
-            <span class="faq-toggle">+</span>
-          </button>
-          <div class="faq-answer">
-            Winners receive exciting prizes, certificates, and recognition.
-            Participants gain networking opportunities and technical exposure.
-          </div>
-        </div>
-
-        <!-- Register -->
-        <div class="faq-item">
-          <button class="faq-question">
-            How do I register?
-            <span class="faq-toggle">+</span>
-          </button>
-          <div class="faq-answer">
-            Click on the "Register" button above and fill out the Google Form.
-          </div>
-        </div>
-
-        <!-- Who can participate -->
-        <div class="faq-item">
-          <button class="faq-question">
-            Who can participate?
-            <span class="faq-toggle">+</span>
-          </button>
-          <div class="faq-answer">
-            All VGEC students can participate. Some events may have team or individual rules.
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <!-- FAQ Section End -->
+<!-- FAQ Section End -->
 
     <!-- Registration Section start -->
     <section id="register" class="py-16 relative z-10 text-center">
       <h2 class="text-4xl font-bold mb-4 glow-text">Register Now</h2>
       <p class="mb-6">Secure your spot by registering here.</p>
-      <a href="YOUR_GOOGLE_FORM_LINK" target="_blank"
-        class="login-btn relative inline-block px-6 py-3 font-bold rounded">
+      <a
+        href="YOUR_GOOGLE_FORM_LINK"
+        target="_blank"
+        class="login-btn relative inline-block px-6 py-3 font-bold rounded"
+      >
         <span>Register</span>
         <div class="btn-glow absolute top-0 left-0 w-full h-full"></div>
       </a>
@@ -663,56 +565,55 @@
     <!-- Registration Section end -->
 
     <!-- Footer Start-->
-    <footer class="footer">
+   <footer class="footer">
 
-      <div class="footer-wrapper">
+  <div class="footer-wrapper">
 
-        <!-- LEFT SECTION -->
-        <div class="footer-left">
-          <h2>HORIZON 1.0</h2>
-          <p>
-            The ultimate IEEE fest celebration with innovation,
-            fun, and collaboration.
-          </p>
+    <!-- LEFT SECTION -->
+    <div class="footer-left">
+      <h2>HORIZON 1.0</h2>
+      <p>
+        The ultimate IEEE fest celebration with innovation,
+        fun, and collaboration.
+      </p>
 
-          <div class="social-icons">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-
-        <!-- MIDDLE SECTION -->
-        <div class="footer-middle">
-          <h3>Quick Links</h3>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Timeline</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- RIGHT SECTION -->
-        <div class="footer-right">
-          <h3>Contact</h3>
-          <p><i class="fas fa-envelope">Email : ieee@vgecg.ac.in</i></p>
-          <p><i class="fas fa-phone"></i></p>
-          <p><i class="fas fa-map-marker-alt"></i> VGEC, Chandkheda, Gujarat</p>
-        </div>
-
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
       </div>
+    </div>
 
-      <div class="footer-bottom">
-        <p>© 2026 HORIZON 1.0 | All Rights Reserved</p>
-        <span>Innovate. Create. Dominate.</span>
-      </div>
+    <!-- MIDDLE SECTION -->
+    <div class="footer-middle">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Timeline</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
 
-    </footer>
+    <!-- RIGHT SECTION -->
+    <div class="footer-right">
+      <h3>Contact</h3>
+      <p><i class="fas fa-envelope">Email : ieee@vgecg.ac.in</i></p>
+      <p><i class="fas fa-phone"></i></p>
+      <p><i class="fas fa-map-marker-alt"></i> VGEC, Chandkheda, Gujarat</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 HORIZON 1.0 | All Rights Reserved</p>
+    <span>Innovate. Create. Dominate.</span>
+  </div>
+
+</footer>
     <!-- Footer End -->
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
