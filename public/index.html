@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
@@ -21,51 +22,27 @@
 
     <!-- Navbar -->
     <nav class="fixed w-full bg-black bg-opacity-60 shadow z-50">
-      <div
-        class="container mx-auto flex justify-between items-center p-4 relative z-10"
-      >
-        <!-- logo block start -->
-        <div class="w-full bg-black text-white p-4 shadow-md">
-          <div class="max-w-7xl mx-auto flex items-center justify-between">
-            <img
-              src="NicePng_until-dawn-logo-png_1421627.png"
-              alt="Horizon Zero Dawn Logo"
-              class="h-10 w-auto"
-              style="filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5))"
-            />
-          </div>
-        </div>
-        <!-- logo block end -->
+  <div class="w-full flex justify-between items-center px-8 py-4">
 
-        <!-- Desktop Links -->
-        <div class="hidden md:flex">
-          <a href="#home" class="mx-2 hover:text-indigo-600">Home</a>
-          <a href="#timeline" class="mx-2 hover:text-indigo-600">Timeline</a>
-          <a href="#events" class="mx-2 hover:text-indigo-600">Events</a>
-          <a href="#faq" class="mx-2 hover:text-indigo-600">FAQ</a>
-          <a href="#contact" class="mx-2 hover:text-indigo-600">Contact</a>
-        </div>
+    <!-- Logo -->
+    <img
+      src="./Horizon 1.0 New dawn.jpeg"
+      alt="Horizon Logo"
+      class="h-10 w-auto"
+      style="filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));"
+    />
 
-        <!-- Hamburger Button for Mobile -->
-        <div class="md:hidden flex items-center">
-          <button id="hamburger" class="focus:outline-none">
-            <svg
-              class="w-8 h-8 text-indigo-400"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </nav>
+    <!-- Desktop Links -->
+    <div class="hidden md:flex">
+      <a href="#home" class="mx-2 hover:text-indigo-600">Home</a>
+      <a href="#timeline" class="mx-2 hover:text-indigo-600">Timeline</a>
+      <a href="#events" class="mx-2 hover:text-indigo-600">Events</a>
+      <a href="#faq" class="mx-2 hover:text-indigo-600">FAQ</a>
+      <a href="#contact" class="mx-2 hover:text-indigo-600">Contact</a>
+    </div>
+
+  </div>
+</nav>
 
     <!-- Mobile Sidebar -->
     <div
@@ -104,7 +81,7 @@
     <!-- Hero Section -->
     <section
       id="home"
-      class="h-screen flex flex-col justify-center items-center text-center relative z-10 px-4"
+      class="min-screen flex flex-col justify-center items-center text-center relative z-10 px-4"
     >
       <div style="text-align: center">
         <img
@@ -114,16 +91,16 @@
         />
       </div>
       <h3 class="text-4xl md:text-6xl font-bold mb-4 glow-text">
-        “Celebrate IEEE Day 2025!” 🎉
+        “Celebrate IEEE Fest 2026!” 
       </h3>
       <p class="text-lg md:text-2xl mb-8">
-        “Join us on 14 oct to celebrate IEEE Day! Participate in engaging
+        “Join us on 20th Feb! Participate in engaging
         events, workshops, and fun activities designed to inspire creativity and
         collaboration. Learn from experts, connect with peers, and be part of
         the legacy of innovation.”
       </p>
       <!-- Registration & Explore Section start -->
-      <section id="register" class="py-0 relative z-10 text-center">
+      <section id="register-section" class="py-0 relative z-10 text-center">
         <a
           href="YOUR_GOOGLE_FORM_LINK"
           target="_blank"
@@ -143,32 +120,65 @@
       </section>
       <!-- Registration & Explore Section end -->
 
-      <div class="countdown flex space-x-6 text-center">
-        <div>
-          <span id="days" class="text-4xl font-bold">00</span>
-          <div>Days</div>
-        </div>
-        <div>
-          <span id="hours" class="text-4xl font-bold">00</span>
-          <div>Hours</div>
-        </div>
-        <div>
-          <span id="minutes" class="text-4xl font-bold">00</span>
-          <div>Minutes</div>
-        </div>
-        <div>
-          <span id="seconds" class="text-4xl font-bold">00</span>
-          <div>Seconds</div>
-        </div>
+      <!-- Countdown Section -->
+<section class="countdown-section">
+  <div class="countdown-container">
+
+    <div class="time-card">
+      <svg class="progress-ring" width="140" height="140">
+        <circle class="progress-bg" cx="70" cy="70" r="60"/>
+        <circle class="progress-circle" id="days-circle" cx="70" cy="70" r="60"/>
+      </svg>
+      <div class="time-content">
+        <h2 id="days">00</h2>
+        <p>Days</p>
       </div>
-    </section>
+    </div>
+
+    <div class="time-card">
+      <svg class="progress-ring" width="140" height="140">
+        <circle class="progress-bg" cx="70" cy="70" r="60"/>
+        <circle class="progress-circle" id="hours-circle" cx="70" cy="70" r="60"/>
+      </svg>
+      <div class="time-content">
+        <h2 id="hours">00</h2>
+        <p>Hours</p>
+      </div>
+    </div>
+
+    <div class="time-card">
+      <svg class="progress-ring" width="140" height="140">
+        <circle class="progress-bg" cx="70" cy="70" r="60"/>
+        <circle class="progress-circle" id="minutes-circle" cx="70" cy="70" r="60"/>
+      </svg>
+      <div class="time-content">
+        <h2 id="minutes">00</h2>
+        <p>Minutes</p>
+      </div>
+    </div>
+
+    <div class="time-card">
+      <svg class="progress-ring" width="140" height="140">
+        <circle class="progress-bg" cx="70" cy="70" r="60"/>
+        <circle class="progress-circle" id="seconds-circle" cx="70" cy="70" r="60"/>
+      </svg>
+      <div class="time-content">
+        <h2 id="seconds">00</h2>
+        <p>Seconds</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
     <!-- timeline section start -->
     <section id="timeline" class="py-16 relative z-10 bg-transparent">
-      <div class="container mx-auto text-center mb-12">
+      <div class="w-full text-center mb-12 px-8">
         <h2 class="text-4xl font-bold text-indigo-400 mb-2">Event Timeline</h2>
         <p class="text-gray-200">Know what’s happening when!</p>
       </div>
-      <div class="relative max-w-2xl mx-auto px-2">
+      <div class="relative w-full max-w-2xl mx-auto px-4">
         <!-- Timeline vertical line for desktop -->
         <div
           class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-indigo-400 z-0"
@@ -472,69 +482,72 @@
 
     <!-- Events Section End -->
     <!-- FAQ Section Start -->
-    <section id="faq" class="py-16 relative z-10 text-center">
-      <h2 class="text-4xl font-bold mb-6 glow-text text-indigo-400">FAQ</h2>
-      <div class="max-w-2xl mx-auto space-y-4">
-        <div
-          class="faq-item bg-black bg-opacity-60 rounded-lg p-6 border border-indigo-400 text-left shadow-lg"
-        >
-          <button
-            class="faq-question flex justify-between items-center w-full font-semibold text-lg text-indigo-300 focus:outline-none"
-          >
-            What is IEEE Day?
-            <span class="faq-toggle text-indigo-400 text-2xl">+</span>
-          </button>
-          <div class="faq-answer mt-2 text-gray-200 hidden">
-            IEEE Day celebrates the first time in history when engineers
-            worldwide and IEEE members gathered to share their technical ideas
-            in 1884.
-          </div>
-        </div>
-        <div
-          class="faq-item bg-black bg-opacity-60 rounded-lg p-6 border border-indigo-400 text-left shadow-lg"
-        >
-          <button
-            class="faq-question flex justify-between items-center w-full font-semibold text-lg text-indigo-300 focus:outline-none"
-          >
-            Who can participate in the events?
-            <span class="faq-toggle text-indigo-400 text-2xl">+</span>
-          </button>
-          <div class="faq-answer mt-2 text-gray-200 hidden">
-            All students of VGEC can participate. Some events may have team or
-            individual requirements.
-          </div>
-        </div>
-        <div
-          class="faq-item bg-black bg-opacity-60 rounded-lg p-6 border border-indigo-400 text-left shadow-lg"
-        >
-          <button
-            class="faq-question flex justify-between items-center w-full font-semibold text-lg text-indigo-300 focus:outline-none"
-          >
-            How do I register?
-            <span class="faq-toggle text-indigo-400 text-2xl">+</span>
-          </button>
-          <div class="faq-answer mt-2 text-gray-200 hidden">
-            Click on the "Register" button above and fill out the Google Form to
-            secure your spot.
-          </div>
-        </div>
-        <div
-          class="faq-item bg-black bg-opacity-60 rounded-lg p-6 border border-indigo-400 text-left shadow-lg"
-        >
-          <button
-            class="faq-question flex justify-between items-center w-full font-semibold text-lg text-indigo-300 focus:outline-none"
-          >
-            Is there any participation fee?
-            <span class="faq-toggle text-indigo-400 text-2xl">+</span>
-          </button>
-          <div class="faq-answer mt-2 text-gray-200 hidden">
-            Some events have a nominal fee (e.g., Treasure Hunt: ₹100 per team).
-            Most activities are free.
-          </div>
-        </div>
+<section id="faq" class="py-16 relative z-10 text-center">
+  <h2 class="text-4xl font-bold mb-6 glow-text text-indigo-400">FAQ</h2>
+
+  <div class="max-w-2xl mx-auto space-y-6">
+
+    <!-- Participation Fee -->
+    <div class="faq-item">
+      <button class="faq-question">
+        What is the participation fee?
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-answer">
+        Some events have a nominal participation fee (e.g., Treasure Hunt: ₹100 per team).
+        Most IEEE Fest activities are free.
       </div>
-    </section>
-    <!-- FAQ Section End -->
+    </div>
+
+    <!-- Games -->
+    <div class="faq-item">
+      <button class="faq-question">
+        What are the games in the IEEE Fest?
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-answer">
+        Games include Treasure Hunt, Logo Quiz, Binary Bingo, Tech Pictionary,
+        Balloon Pop, Paper Plane Challenge, Cookie Game, Blind Drawing and more.
+      </div>
+    </div>
+
+    <!-- Prizes -->
+    <div class="faq-item">
+      <button class="faq-question">
+        What are the prizes and benefits?
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-answer">
+        Winners receive exciting prizes, certificates, and recognition.
+        Participants gain networking opportunities and technical exposure.
+      </div>
+    </div>
+
+    <!-- Register -->
+    <div class="faq-item">
+      <button class="faq-question">
+        How do I register?
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-answer">
+        Click on the "Register" button above and fill out the Google Form.
+      </div>
+    </div>
+
+    <!-- Who can participate -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Who can participate?
+        <span class="faq-toggle">+</span>
+      </button>
+      <div class="faq-answer">
+        All VGEC students can participate. Some events may have team or individual rules.
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- FAQ Section End -->
 
     <!-- Registration Section start -->
     <section id="register" class="py-16 relative z-10 text-center">
@@ -550,142 +563,55 @@
       </a>
     </section>
     <!-- Registration Section end -->
+
     <!-- Footer Start-->
-    <footer class="bg-black bg-opacity-80 text-gray-300 relative z-10">
-      <div
-        class="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-12"
-      >
-        <!-- Left Section -->
-        <div>
-          <h2 class="text-2xl font-bold mb-4 text-white">HORIZON 1.0</h2>
-          <p class="mb-6">
-            The ultimate IEEE Day celebration with innovation, fun, and
-            collaboration.
-          </p>
-          <div class="flex space-x-4">
-            <a
-              href="#"
-              class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-indigo-600 transition"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M7.75 2C4.678 2 2 4.678 2 7.75v8.5C2 19.322 4.678 22 7.75 22h8.5c3.072 0 5.75-2.678 5.75-5.75v-8.5C22 4.678 19.322 2 16.25 2h-8.5zm0 2h8.5A3.75 3.75 0 0120 7.75v8.5A3.75 3.75 0 0116.25 20h-8.5A3.75 3.75 0 014 16.25v-8.5A3.75 3.75 0 017.75 4zm8.75 1a1 1 0 100 2 1 1 0 000-2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6z"
-                />
-              </svg>
-            </a>
-            <a
-              href="#"
-              class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-indigo-600 transition"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                class="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h7v-9h-3v-3h3v-2c0-3.084 1.917-4.763 4.713-4.763 1.34 0 2.492.099 2.828.144v3.28h-1.942c-1.524 0-1.818.724-1.818 1.785v2.554h3.633l-.474 3h-3.159v9h6.219c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5z"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
+   <footer class="footer">
 
-        <!-- Middle Section -->
-        <div>
-          <h3 class="text-xl font-bold mb-4 text-white">Quick Links</h3>
-          <ul class="space-y-2">
-            <li>
-              <a href="#home" class="hover:text-indigo-400 transition">Home</a>
-            </li>
-            <li>
-              <a href="#timeline" class="hover:text-indigo-400 transition"
-                >Timeline</a
-              >
-            </li>
-            <li>
-              <a href="#events" class="hover:text-indigo-400 transition"
-                >Events</a
-              >
-            </li>
-            <li>
-              <a href="#faq" class="hover:text-indigo-400 transition">FAQ</a>
-            </li>
-            <li>
-              <a href="#contact" class="hover:text-indigo-400 transition"
-                >Contact</a
-              >
-            </li>
-            <li>
-              <a href="#register" class="hover:text-indigo-400 transition"
-                >Register</a
-              >
-            </li>
-          </ul>
-        </div>
+  <div class="footer-wrapper">
 
-        <!-- Right Section -->
-        <div>
-          <h3 class="text-xl font-bold mb-4 text-white">Contact</h3>
-          <p class="flex items-center mb-2">
-            <svg
-              class="w-5 h-5 text-red-500 mr-2"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path d="M16 12H8m0 0V8m0 4v4" />
-            </svg>
-            mohitvanzara32@gmail.com
-          </p>
-          <p class="flex items-center mb-2">
-            <svg
-              class="w-5 h-5 text-red-500 mr-2"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M3 5h2l3.6 7.59a1 1 0 00.92.41h7.02a1 1 0 00.92-.41L21 5H3z"
-              />
-            </svg>
-            +91 9313046084
-          </p>
-          <p class="flex items-center">
-            <svg
-              class="w-5 h-5 text-red-500 mr-2"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M17.657 16.657L13.414 12.414A2 2 0 0012 12h0a2 2 0 00-1.414.586L6.343 16.657M12 22v-10"
-              />
-            </svg>
-            Vishwakarma Govt. Engg. College, Chandkheda, Gujarat
-          </p>
-        </div>
+    <!-- LEFT SECTION -->
+    <div class="footer-left">
+      <h2>HORIZON 1.0</h2>
+      <p>
+        The ultimate IEEE fest celebration with innovation,
+        fun, and collaboration.
+      </p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
       </div>
+    </div>
 
-      <!-- Bottom Bar -->
-      <div class="border-t border-gray-700 text-center py-4">
-        <p class="text-sm">&copy; 2025 HORIZON 1.0 | All rights reserved.</p>
-        <p class="mt-2">
-          <span class="text-red-500 font-bold">Innovate.</span>
-          <span class="text-indigo-400 font-bold"> Create.</span>
-          <span class="text-blue-500 font-bold"> Dominate.</span>
-        </p>
-      </div>
-    </footer>
+    <!-- MIDDLE SECTION -->
+    <div class="footer-middle">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Timeline</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
 
+    <!-- RIGHT SECTION -->
+    <div class="footer-right">
+      <h3>Contact</h3>
+      <p><i class="fas fa-envelope">Email : ieee@vgecg.ac.in</i></p>
+      <p><i class="fas fa-phone"></i></p>
+      <p><i class="fas fa-map-marker-alt"></i> VGEC, Chandkheda, Gujarat</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 HORIZON 1.0 | All Rights Reserved</p>
+    <span>Innovate. Create. Dominate.</span>
+  </div>
+
+</footer>
     <!-- Footer End -->
 
     <script src="script.js"></script>

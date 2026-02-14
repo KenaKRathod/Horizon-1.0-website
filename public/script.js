@@ -1,26 +1,42 @@
-// Countdown Timer
-const countdownDate = new Date("Oct 14, 2025 10:00:00").getTime();
-const daysEl = document.getElementById("days");
-const hoursEl = document.getElementById("hours");
-const minutesEl = document.getElementById("minutes");
-const secondsEl = document.getElementById("seconds");
+// Countdown Timer for IEEE Fest
+const eventDate = new Date("Feb 20, 2026 00:00:00").getTime();
+
+const circles = {
+  days: document.getElementById("days-circle"),
+  hours: document.getElementById("hours-circle"),
+  minutes: document.getElementById("minutes-circle"),
+  seconds: document.getElementById("seconds-circle")
+};
+
+const radius = 60;
+const circumference = 2 * Math.PI * radius;
+
+function setProgress(circle, value, max) {
+  const offset = circumference - (value / max) * circumference;
+  circle.style.strokeDashoffset = offset;
+}
 
 setInterval(() => {
   const now = new Date().getTime();
-  const distance = countdownDate - now;
+  const distance = eventDate - now;
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((distance / (1000 * 60)) % 60);
+  const seconds = Math.floor((distance / 1000) % 60);
 
-  daysEl.innerText = days.toString().padStart(2, "0");
-  hoursEl.innerText = hours.toString().padStart(2, "0");
-  minutesEl.innerText = minutes.toString().padStart(2, "0");
-  secondsEl.innerText = seconds.toString().padStart(2, "0");
+  document.getElementById("days").innerText = days;
+  document.getElementById("hours").innerText = hours;
+  document.getElementById("minutes").innerText = minutes;
+  document.getElementById("seconds").innerText = seconds;
+
+  setProgress(circles.days, days % 365, 365);
+  setProgress(circles.hours, hours, 24);
+  setProgress(circles.minutes, minutes, 60);
+  setProgress(circles.seconds, seconds, 60);
+
 }, 1000);
+
 
 // Initialize particles.js with hover disabled
 particlesJS("particles-js", {
@@ -121,16 +137,19 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 // FAQ Accordion Functionality
-document.querySelectorAll('.faq-question').forEach(btn => {
-  btn.addEventListener('click', function () {
-    const answer = this.nextElementSibling;
-    const toggle = this.querySelector('.faq-toggle');
-    if (answer.classList.contains('hidden')) {
-      answer.classList.remove('hidden');
-      toggle.textContent = '−';
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+  const question = item.querySelector(".faq-question");
+  const toggle = item.querySelector(".faq-toggle");
+
+  question.addEventListener("click", () => {
+    item.classList.toggle("active");
+
+    if (item.classList.contains("active")) {
+      toggle.textContent = "−";
     } else {
-      answer.classList.add('hidden');
-      toggle.textContent = '+';
+      toggle.textContent = "+";
     }
   });
 });
