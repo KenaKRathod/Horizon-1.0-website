@@ -102,23 +102,48 @@ if (hamburger && sidebar && closeBtn) {
 }
 
 // ===== Initialize Swiper for Event Section =====
-var swiper = new Swiper(".mySwiper", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 30,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+ var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      // Auto-flip effect
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      // Smooth transition
+      speed: 800,
+      // Loop through slides
+      loop: true,
+      // Responsive breakpoints
+      breakpoints: {
+        // when window width is < 480px
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 1.5,
+          spaceBetween: 20
+        },
+        // when window width is >= 768px
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 25
+        },
+        // when window width is >= 1024px
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        }
+      }
+    });
+
+    
 
 // FAQ Accordion Functionality
 document.querySelectorAll('.faq-question').forEach(btn => {

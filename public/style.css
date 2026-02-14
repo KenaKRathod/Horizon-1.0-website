@@ -5,10 +5,12 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-body {
-  position: relative;
-  z-index: 1;
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
+
 
 /* Particles background */
 #particles-js {
@@ -129,50 +131,415 @@ body {
 }
 
 
-/* ===== Event Section Styles ===== */
-#event-section {
-  background-color: #0d0d0d;
-  color: #fff;
-  text-align: center;
-  padding: 80px 20px;
+/* ==================== Event Section Styles =============== */
+    #event-section {
+      background-color: #0d0d0d;
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+      min-height: 100vh;
+    }
+
+    .event-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #4f46e5;
+      margin-bottom: 10px;
+    }
+
+    .event-subtitle {
+      color: #ccc;
+      margin-bottom: 50px;
+      font-size: 1.1rem;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 500px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #111;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(79, 70, 229, 0.6);
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+    }
+
+    .event-name {
+      background: #1f1f1f;
+      padding: 20px;
+      font-size: 1.2rem;
+      color: #fff;
+      font-weight: 600;
+      width: 100%;
+      height: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Pagination Styles */
+    .swiper-pagination {
+      bottom: 10px !important;
+    }
+
+    .swiper-pagination-bullet {
+      background: #4f46e5;
+      opacity: 0.5;
+      width: 12px;
+      height: 12px;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+      background: #4f46e5;
+    }
+
+    /* Mobile Responsive Styles */
+    @media screen and (max-width: 768px) {
+      #event-section {
+        padding: 60px 15px;
+      }
+
+      .event-title {
+        font-size: 2rem;
+      }
+
+      .event-subtitle {
+        font-size: 1rem;
+        margin-bottom: 40px;
+      }
+
+      .swiper {
+        height: 400px;
+      }
+
+      .event-name {
+        font-size: 1rem;
+        padding: 15px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      #event-section {
+        padding: 50px 10px;
+      }
+
+      .event-title {
+        font-size: 1.75rem;
+      }
+
+      .event-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 30px;
+      }
+
+      .swiper {
+        height: 350px;
+      }
+
+      .event-name {
+        font-size: 0.9rem;
+        padding: 12px;
+      }
+
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+      }
+    }
+/* ==============End of event section styles=========== */
+/* FAQ Container */
+.faq-item {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #6366f1;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  transition: all 0.3s ease;
 }
 
-.event-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #4f46e5;
+/* Hover Glow Effect */
+.faq-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.7);
+}
+
+/* Question Button */
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #a5b4fc;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Toggle Symbol */
+.faq-toggle {
+  font-size: 22px;
+  color: #818cf8;
+}
+
+/* Answer */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  color: #e5e7eb;
+  margin-top: 10px;
+}
+
+/* Active Answer */
+.faq-item.active .faq-answer {
+  max-height: 200px;
+}
+
+
+/* Countdown Styling */
+/* ===== Countdown Section ===== */
+.countdown-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.countdown-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ===== Card Style ===== */
+.time-card {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  backdrop-filter: blur(15px);
+  background: rgba(0, 255, 255, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s ease;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+}
+
+.time-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
+}
+
+/* ===== Progress Ring ===== */
+.progress-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+.progress-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 8;
+}
+
+.progress-circle {
+  fill: none;
+  stroke: #00ffff;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 377;
+  stroke-dashoffset: 377;
+  transition: stroke-dashoffset 1s linear;
+  filter: drop-shadow(0 0 8px #00ffff);
+}
+
+/* ===== Time Content ===== */
+.time-content {
+  position: absolute;
+  text-align: center;
+  color: #00ffff;
+}
+
+.time-content h2 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.time-content p {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  background: #050d14;
+  padding: 60px 0;
+  color: #fff;
+  border-top: 2px solid #00ffff;
+  width: 100%;
+  margin: 0;
+}
+
+/* 3 COLUMN LAYOUT */
+.footer-wrapper {
+  width: 100%;
+  padding: 0 8%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+}
+
+
+.footer-left,
+.footer-middle,
+.footer-right {
+  text-align: left;
+}
+
+
+/* LEFT */
+.footer-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-left h2 {
+  color: #00ffff;
+  margin-bottom: 15px;
+}
+
+.footer-left p {
+  color: #aaa;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* SOCIAL ICONS */
+.social-icons a {
+  display: inline-block;
+  margin-right: 12px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background: rgba(0, 255, 255, 0.1);
+  color: #00ffff;
+  transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #00ffff;
+  color: #000;
+  box-shadow: 0 0 15px #00ffff;
+  transform: translateY(-5px);
+}
+
+/* MIDDLE */
+.footer-middle {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-middle h3 {
+  color: #00ffff;
+  margin-bottom: 15px;
+}
+
+.footer-middle ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-middle ul li {
   margin-bottom: 10px;
 }
 
-.event-subtitle {
-  color: #ccc;
-  margin-bottom: 50px;
+.footer-middle ul li a {
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-.swiper {
+.footer-middle ul li a:hover {
+  color: #00ffff;
+  padding-left: 5px;
+}
+
+/* RIGHT */
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-right h3 {
+  color: #00ffff;
+  margin-bottom: 15px;
+}
+
+.footer-right p {
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+.footer-right i {
+  color: #00ffff;
+  margin-right: 8px;
+}
+
+/* BOTTOM */
+.footer-bottom {
   width: 100%;
-  padding-bottom: 50px;
+  margin-top: 50px;
+  padding: 20px 8% 0 8%;
 }
 
-.swiper-slide {
-  background: #111;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(79, 70, 229, 0.4);
-  transition: transform 0.3s ease;
-  width: 150px;
-  height: 150px;
+.footer-bottom span {
+  display: block;
+  margin-top: 5px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }
 
-.swiper-slide img {
-  width: 50%;
-  height: 80%;
-  object-fit: cover;
-}
-
-.event-name {
-  background: #1f1f1f;
-  padding: 10px;
-  font-size: 1.1rem;
-  color: #fff;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
