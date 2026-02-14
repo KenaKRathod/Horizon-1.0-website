@@ -1,45 +1,61 @@
-// Countdown Timer
-const countdownDate = new Date("Oct 14, 2025 10:00:00").getTime();
-const daysEl = document.getElementById("days");
-const hoursEl = document.getElementById("hours");
-const minutesEl = document.getElementById("minutes");
-const secondsEl = document.getElementById("seconds");
+// Countdown Timer for IEEE Fest
+const eventDate = new Date("Feb 20, 2026 00:00:00").getTime();
+
+const circles = {
+  days: document.getElementById("days-circle"),
+  hours: document.getElementById("hours-circle"),
+  minutes: document.getElementById("minutes-circle"),
+  seconds: document.getElementById("seconds-circle")
+};
+
+const radius = 60;
+const circumference = 2 * Math.PI * radius;
+
+function setProgress(circle, value, max) {
+  const offset = circumference - (value / max) * circumference;
+  circle.style.strokeDashoffset = offset;
+}
 
 setInterval(() => {
   const now = new Date().getTime();
-  const distance = countdownDate - now;
+  const distance = eventDate - now;
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor(
-    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-  );
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((distance / (1000 * 60)) % 60);
+  const seconds = Math.floor((distance / 1000) % 60);
 
-  daysEl.innerText = days.toString().padStart(2, "0");
-  hoursEl.innerText = hours.toString().padStart(2, "0");
-  minutesEl.innerText = minutes.toString().padStart(2, "0");
-  secondsEl.innerText = seconds.toString().padStart(2, "0");
+  document.getElementById("days").innerText = days;
+  document.getElementById("hours").innerText = hours;
+  document.getElementById("minutes").innerText = minutes;
+  document.getElementById("seconds").innerText = seconds;
+
+  setProgress(circles.days, days % 365, 365);
+  setProgress(circles.hours, hours, 24);
+  setProgress(circles.minutes, minutes, 60);
+  setProgress(circles.seconds, seconds, 60);
+
 }, 1000);
 
-// Initialize particles.js with hover disabled
+
+// Initialize particles.js with Horizon New Dawn theme
 particlesJS("particles-js", {
   particles: {
     number: { value: 80, density: { enable: true, value_area: 800 } },
-    color: { value: "#00d4ff" },
+    color: { value: "#ff6b00" }, // Orange from New Dawn palette
     shape: { type: "circle" },
     opacity: { value: 0.5, random: true },
-    size: { value: 2, random: true },
+    size: { value: 3, random: true },
     line_linked: {
       enable: true,
       distance: 150,
-      color: "#00d4ff",
+      color: "#8a2be2", // Purple from New Dawn palette
       opacity: 0.4,
       width: 1,
     },
     move: {
       enable: true,
-      speed: 3,
+      speed: 2,
       direction: "none",
       random: true,
       straight: false,
@@ -109,33 +125,27 @@ if (hamburger && sidebar && closeBtn) {
         el: ".swiper-pagination",
         clickable: true,
       },
-      // Auto-flip effect
       autoplay: {
-        delay: 3000,
+        delay: 3500,
         disableOnInteraction: false,
+        pauseOnMouseEnter: true,
       },
-      // Smooth transition
-      speed: 800,
-      // Loop through slides
+      speed: 1000,
       loop: true,
-      // Responsive breakpoints
+      grabCursor: true,
       breakpoints: {
-        // when window width is < 480px
         0: {
           slidesPerView: 1,
           spaceBetween: 20
         },
-        // when window width is >= 480px
         480: {
           slidesPerView: 1.5,
           spaceBetween: 20
         },
-        // when window width is >= 768px
         768: {
           slidesPerView: 2,
           spaceBetween: 25
         },
-        // when window width is >= 1024px
         1024: {
           slidesPerView: 3,
           spaceBetween: 30
@@ -146,16 +156,19 @@ if (hamburger && sidebar && closeBtn) {
     
 
 // FAQ Accordion Functionality
-document.querySelectorAll('.faq-question').forEach(btn => {
-  btn.addEventListener('click', function () {
-    const answer = this.nextElementSibling;
-    const toggle = this.querySelector('.faq-toggle');
-    if (answer.classList.contains('hidden')) {
-      answer.classList.remove('hidden');
-      toggle.textContent = '−';
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+  const question = item.querySelector(".faq-question");
+  const toggle = item.querySelector(".faq-toggle");
+
+  question.addEventListener("click", () => {
+    item.classList.toggle("active");
+
+    if (item.classList.contains("active")) {
+      toggle.textContent = "−";
     } else {
-      answer.classList.add('hidden');
-      toggle.textContent = '+';
+      toggle.textContent = "+";
     }
   });
 });
