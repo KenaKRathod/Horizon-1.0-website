@@ -11,111 +11,97 @@
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
     />
+
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
   </head>
   <body class="font-sans text-white relative overflow-x-hidden">
     <!-- Particles Background -->
     <div id="particles-js"></div>
 
     <!-- Navbar -->
-    <nav class="fixed w-full bg-black bg-opacity-60 shadow z-50">
-  <div class="w-full flex justify-between items-center px-8 py-4">
+    <nav class="navbar">
+  <div class="nav-container">
 
     <!-- Logo -->
     <img
-      src="./Horizon 1.0 New dawn.jpeg"
+      src="./ChatGPT_Image_Feb_14__2026__04_25_30_PM-removebg-preview.png"
       alt="Horizon Logo"
-      class="h-10 w-auto"
-      style="filter: drop-shadow(0 0 5px rgba(255,255,255,0.5));"
+      class="nav-logo"
     />
 
     <!-- Desktop Links -->
-    <div class="hidden md:flex">
-      <a href="#home" class="mx-2 hover:text-indigo-600">Home</a>
-      <a href="#timeline" class="mx-2 hover:text-indigo-600">Timeline</a>
-      <a href="#events" class="mx-2 hover:text-indigo-600">Events</a>
-      <a href="#faq" class="mx-2 hover:text-indigo-600">FAQ</a>
-      <a href="#contact" class="mx-2 hover:text-indigo-600">Contact</a>
+    <div class="nav-links">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#timeline" class="nav-link">Timeline</a>
+      <a href="#events" class="nav-link">Events</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </div>
+
+    <!-- Mobile Hamburger -->
+    <button id="hamburger" class="hamburger">
+      <i class="fas fa-bars"></i>
+    </button>
 
   </div>
 </nav>
 
     <!-- Mobile Sidebar -->
-    <div
-      id="mobile-sidebar"
-      class="fixed top-0 right-[-100%] w-64 h-full bg-black bg-opacity-90 shadow z-50 transition-all duration-300"
-    >
-      <div
-        class="flex justify-between items-center p-4 border-b border-indigo-500"
-      >
-        <div class="text-xl font-bold text-indigo-400">Menu</div>
-        <button id="sidebar-close" class="focus:outline-none">
-          <svg
-            class="w-8 h-8 text-red-500"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            ></path>
-          </svg>
+    <div id="mobile-sidebar" class="mobile-sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-title">Menu</div>
+        <button id="sidebar-close" class="sidebar-close">
+          <i class="fas fa-times"></i>
         </button>
       </div>
-      <div class="flex flex-col mt-6 space-y-4 text-lg ml-4">
-        <a href="#home" class="hover:text-indigo-400">Home</a>
-        <a href="#timeline" class="hover:text-indigo-400">Timeline</a>
-        <a href="#events" class="hover:text-indigo-400">Events</a>
-        <a href="#register" class="hover:text-indigo-400">Register</a>
-        <a href="#contact" class="hover:text-indigo-400">Contact</a>
+      <div class="sidebar-links">
+        <a href="#home" class="sidebar-link">Home</a>
+        <a href="#timeline" class="sidebar-link">Timeline</a>
+        <a href="#events" class="sidebar-link">Events</a>
+        <a href="#faq" class="sidebar-link">FAQ</a>
+        <a href="#contact" class="sidebar-link">Contact</a>
       </div>
     </div>
 
     <!-- Hero Section -->
-    <section
-      id="home"
-      class="min-screen flex flex-col justify-center items-center text-center relative z-10 px-4"
-    >
-      <div style="text-align: center">
+    <section id="home" class="hero-section">
+      <div class="hero-logo-container">
         <img
-          src="NicePng_until-dawn-logo-png_1421627.png"
+          src="./ChatGPT_Image_Feb_14__2026__04_25_30_PM-removebg-preview.png"
           alt="Horizon Zero Dawn Logo"
-          style="max-width: 100%; height: auto"
+          class="hero-logo"
         />
       </div>
-      <h3 class="text-4xl md:text-6xl font-bold mb-4 glow-text">
-        “Celebrate IEEE Fest 2026!” 
+      <h3 class="hero-title">
+        "Celebrate IEEE Fest 2026!" 
       </h3>
-      <p class="text-lg md:text-2xl mb-8">
-        “Join us on 20th Feb! Participate in engaging
+      <p class="hero-description">
+        Join us on 20th Feb! Participate in engaging
         events, workshops, and fun activities designed to inspire creativity and
         collaboration. Learn from experts, connect with peers, and be part of
-        the legacy of innovation.”
+        the legacy of innovation.
       </p>
+      
       <!-- Registration & Explore Section start -->
-      <section id="register-section" class="py-0 relative z-10 text-center">
+      <section class="hero-buttons">
         <a
           href="YOUR_GOOGLE_FORM_LINK"
           target="_blank"
-          class="login-btn relative inline-block px-6 py-3 font-bold rounded"
+          class="horizon-btn"
         >
           <span>Register</span>
-          <div class="btn-glow absolute top-0 left-0 w-full h-full"></div>
+          <div class="btn-glow"></div>
         </a>
         <a
           href="#timeline"
-          style="margin-left: 20px"
-          class="login-btn relative inline-block px-6 py-3 font-bold rounded"
+          class="horizon-btn"
         >
           <span>Explore</span>
-          <div class="btn-glow absolute top-0 left-0 w-full h-full"></div>
+          <div class="btn-glow"></div>
         </a>
       </section>
       <!-- Registration & Explore Section end -->
@@ -170,322 +156,228 @@
 
   </div>
 </section>
+</section>
 
 
     <!-- timeline section start -->
-    <section id="timeline" class="py-16 relative z-10 bg-transparent">
-      <div class="w-full text-center mb-12 px-8">
-        <h2 class="text-4xl font-bold text-indigo-400 mb-2">Event Timeline</h2>
-        <p class="text-gray-200">Know what’s happening when!</p>
+    <section id="timeline" class="timeline-section">
+      <div class="section-header">
+        <h2 class="section-title">Event Timeline</h2>
+        <p class="section-subtitle">Know what's happening when!</p>
       </div>
-      <div class="relative w-full max-w-2xl mx-auto px-4">
+      <div class="timeline-wrapper">
         <!-- Timeline vertical line for desktop -->
-        <div
-          class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-indigo-400 z-0"
-        ></div>
-        <div class="flex flex-col space-y-12">
+        <div class="timeline-line"></div>
+        
+        <div class="timeline-events">
           <!-- Treasure Hunt Event Box -->
-          <div class="flex flex-col md:flex-row items-center group">
-            <div class="md:w-1/2 md:pr-8 flex md:justify-end w-full">
-              <div
-                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-left"
-              >
-                <div class="flex items-center mb-2">
-                  <span
-                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
-                  </span>
-                  <h3 class="font-bold text-lg">9:00 AM – 10:30 AM</h3>
-                </div>
-                <p class="font-semibold text-indigo-400 mb-1">Treasure Hunt</p>
-                <ul class="text-sm text-gray-200 ml-1">
+          <div class="timeline-item left">
+            <div class="timeline-card animate-fade-in-left">
+              <div class="timeline-icon">
+                <i class="fas fa-search"></i>
+              </div>
+              <div class="timeline-content">
+                <h3 class="timeline-time">9:00 AM – 10:30 AM</h3>
+                <p class="timeline-event-name">Treasure Hunt</p>
+                <ul class="timeline-details">
                   <li>10 teams, 4 members each</li>
                   <li>Location: Across VGEC</li>
                   <li>Fees: ₹100 per team</li>
                 </ul>
               </div>
             </div>
-            <div class="md:w-1/2"></div>
           </div>
+
           <!-- DRDO Seminar Event Box -->
-          <div class="flex flex-col md:flex-row items-center group">
-            <div class="md:w-1/2"></div>
-            <div class="md:w-1/2 md:pl-8 flex md:justify-start w-full">
-              <div
-                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-right"
-              >
-                <div class="flex items-center mb-2">
-                  <span
-                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M12 14l9-5-9-5-9 5 9 5z"
-                      />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M12 14l6.16-3.422A12.083 12.083 0 0121 13.5c0 2.485-2.239 4.5-5 4.5s-5-2.015-5-4.5c0-.828.336-1.579.84-2.078L12 14z"
-                      />
-                    </svg>
-                  </span>
-                  <h3 class="font-bold text-lg">11:00 AM – 1:00 PM</h3>
-                </div>
-                <p class="font-semibold text-indigo-400 mb-1">DRDO Seminar</p>
-                <ul class="text-sm text-gray-200 ml-1">
-                  <li>Venue: J Block Auditorium</li>
+          <div class="timeline-item right">
+            <div class="timeline-card animate-fade-in-right">
+              <div class="timeline-icon">
+                <i class="fas fa-chalkboard-teacher"></i>
+              </div>
+              <div class="timeline-content">
+                <h3 class="timeline-time">11:00 AM – 12:00 PM</h3>
+                <p class="timeline-event-name">DRDO Seminar</p>
+                <ul class="timeline-details">
+                  <li>Expert talk on defense technology</li>
+                  <li>Location: Main Auditorium</li>
+                  <li>Free for all students</li>
                 </ul>
               </div>
             </div>
           </div>
-          <!-- Stalls & Fun Games Event Box -->
-          <div class="flex flex-col md:flex-row items-center group">
-            <div class="md:w-1/2 md:pr-8 flex md:justify-end w-full">
-              <div
-                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-left"
-              >
-                <div class="flex items-center mb-2">
-                  <span
-                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle cx="12" cy="12" r="10" />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M8 12h8M12 8v8"
-                      />
-                    </svg>
-                  </span>
-                  <h3 class="font-bold text-lg">1:00 PM – 3:00 PM</h3>
-                </div>
-                <p class="font-semibold text-indigo-400 mb-1">
-                  Stalls & Fun Games
-                </p>
-                <ul class="text-sm text-gray-200 ml-1">
-                  <li>Food stalls + Minute-to-Win Games</li>
-                  <li>
-                    Games: Balloon Pop, Paper Plane, Cookie Game, Blind Drawing,
-                    etc.
-                  </li>
-                  <li>Location: M Block</li>
-                </ul>
+
+          <!-- Fun Event 1 -->
+          <div class="timeline-item left">
+            <div class="timeline-card animate-fade-in-left">
+              <div class="timeline-icon">
+                <i class="fas fa-gamepad"></i>
               </div>
-            </div>
-            <div class="md:w-1/2"></div>
-          </div>
-          <!-- Talent Show Event Box -->
-          <div class="flex flex-col md:flex-row items-center group">
-            <div class="md:w-1/2"></div>
-            <div class="md:w-1/2 md:pl-8 flex md:justify-start w-full">
-              <div
-                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-right"
-              >
-                <div class="flex items-center mb-2">
-                  <span
-                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M9 19V6h13M9 6l-7 7 7 7"
-                      />
-                    </svg>
-                  </span>
-                  <h3 class="font-bold text-lg">1:30 PM – 3:00 PM</h3>
-                </div>
-                <p class="font-semibold text-indigo-400 mb-1">Talent Show</p>
-                <ul class="text-sm text-gray-200 ml-1">
-                  <li>Venue: M Block</li>
-                  <li>Requirements: Red Carpet, Bluetooth Speaker</li>
+              <div class="timeline-content">
+                <h3 class="timeline-time">12:30 PM – 1:30 PM</h3>
+                <p class="timeline-event-name">Logo Quiz & Binary Bingo</p>
+                <ul class="timeline-details">
+                  <li>Test your knowledge</li>
+                  <li>Fun gaming activities</li>
+                  <li>Exciting prizes</li>
                 </ul>
               </div>
             </div>
           </div>
-          <!-- Technical Games Event Box -->
-          <div class="flex flex-col md:flex-row items-center group">
-            <div class="md:w-1/2 md:pr-8 flex md:justify-end w-full">
-              <div
-                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-left"
-              >
-                <div class="flex items-center mb-2">
-                  <span
-                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M8 6h.01M16 6h.01M12 10v6"
-                      />
-                    </svg>
-                  </span>
-                  <h3 class="font-bold text-lg">3:15 PM – 4:00 PM</h3>
-                </div>
-                <p class="font-semibold text-indigo-400 mb-1">
-                  Technical Games
-                </p>
-                <ul class="text-sm text-gray-200 ml-1">
-                  <li>Logo Quiz, Binary Bingo, Tech Pictionary</li>
-                  <li>Venue: M104 & M106</li>
+
+          <!-- Lunch Break -->
+          <div class="timeline-item right">
+            <div class="timeline-card animate-fade-in-right">
+              <div class="timeline-icon">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <div class="timeline-content">
+                <h3 class="timeline-time">1:30 PM – 2:30 PM</h3>
+                <p class="timeline-event-name">Lunch Break</p>
+                <ul class="timeline-details">
+                  <li>Refreshments available</li>
+                  <li>Network with peers</li>
                 </ul>
               </div>
             </div>
-            <div class="md:w-1/2"></div>
           </div>
-          <!-- Jamming Session Event Box -->
-          <div class="flex flex-col md:flex-row items-center group">
-            <div class="md:w-1/2"></div>
-            <div class="md:w-1/2 md:pl-8 flex md:justify-start w-full">
-              <div
-                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-right"
-              >
-                <div class="flex items-center mb-2">
-                  <span
-                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M9 19V6h13M9 6l-7 7 7 7"
-                      />
-                    </svg>
-                  </span>
-                  <h3 class="font-bold text-lg">4:00 PM – 4:30 PM</h3>
-                </div>
-                <p class="font-semibold text-indigo-400 mb-1">
-                  Jamming Session
-                </p>
+
+          <!-- Fun Event 2 -->
+          <div class="timeline-item left">
+            <div class="timeline-card animate-fade-in-left">
+              <div class="timeline-icon">
+                <i class="fas fa-palette"></i>
               </div>
-            </div>
-          </div>
-          <!-- Garba Event Box -->
-          <div class="flex flex-col md:flex-row items-center group">
-            <div class="md:w-1/2 md:pr-8 flex md:justify-end w-full">
-              <div
-                class="bg-black bg-opacity-60 shadow-lg rounded-lg p-6 border border-indigo-400 w-full md:w-auto animate-fade-in-left"
-              >
-                <div class="flex items-center mb-2">
-                  <span
-                    class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-500 text-white mr-3"
-                  >
-                    <svg
-                      class="h-6 w-6"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle cx="12" cy="12" r="10" />
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M12 8v4l3 3"
-                      />
-                    </svg>
-                  </span>
-                  <h3 class="font-bold text-lg">4:30 PM – 5:30 PM</h3>
-                </div>
-                <p class="font-semibold text-indigo-400 mb-1">Garba</p>
-                <ul class="text-sm text-gray-200 ml-1">
-                  <li>Venue: L Block</li>
-                  <li>
-                    Requirements: Speaker System, 2 Mics, Cleaning of Block
-                  </li>
+              <div class="timeline-content">
+                <h3 class="timeline-time">2:30 PM – 4:00 PM</h3>
+                <p class="timeline-event-name">Creative Activities</p>
+                <ul class="timeline-details">
+                  <li>Tech Pictionary</li>
+                  <li>Blind Drawing Challenge</li>
+                  <li>Paper Plane Competition</li>
                 </ul>
               </div>
             </div>
-            <div class="md:w-1/2"></div>
           </div>
+
+          <!-- Closing Ceremony -->
+          <div class="timeline-item right">
+            <div class="timeline-card animate-fade-in-right">
+              <div class="timeline-icon">
+                <i class="fas fa-trophy"></i>
+              </div>
+              <div class="timeline-content">
+                <h3 class="timeline-time">4:00 PM – 5:00 PM</h3>
+                <p class="timeline-event-name">Prize Distribution</p>
+                <ul class="timeline-details">
+                  <li>Award ceremony</li>
+                  <li>Closing remarks</li>
+                  <li>Group photos</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
     <!-- Events Section -->
-   <!-- ===== Event Section Start ===== -->
-<section id="event-section">
-  <h2 class="event-title">Our Events</h2>
-  <p class="event-subtitle">Explore our exciting activities and programs</p>
-
-  <!-- Swiper Container -->
-  <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img src="1[1].jpg" alt="Event 3" />
-        <h3 class="event-name">Hackathon</h3>
-      </div>
-      <div class="swiper-slide">
-        <img src="1[1].jpg" alt="Event 4" />
-        <h3 class="event-name">Project Expo</h3>
-      </div>
-      <div class="swiper-slide">
-        <img src="1[1].jpg" alt="Event 5" />
-        <h3 class="event-name">Workshop</h3>
-      </div>
-      <div class="swiper-slide">
-        <img src="1[1].jpg" alt="Event 5" />
-        <h3 class="event-name">Garba</h3>
-      </div>
+  <!-- ===== Event Section Start ===== -->
+  <section id="event-section">
+    <!-- Animated particles -->
+    <div class="particles">
+      <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+      <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
+      <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
+      <div class="particle" style="left: 40%; animation-delay: 1s;"></div>
+      <div class="particle" style="left: 50%; animation-delay: 3s;"></div>
+      <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+      <div class="particle" style="left: 70%; animation-delay: 2.5s;"></div>
+      <div class="particle" style="left: 80%; animation-delay: 4.5s;"></div>
+      <div class="particle" style="left: 90%; animation-delay: 1.5s;"></div>
     </div>
-    <div class="swiper-pagination"></div>
-  </div>
-</section>
-<!-- ===== Event Section End ===== -->
 
-    <!-- Events Section End -->
+    <h2 class="event-title">Our Events</h2>
+    <p class="event-subtitle">A New Dawn of Innovation</p>
+
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="event-badge">Featured</div>
+          <div class="image-container">
+            <img src="1[1].jpg" alt="Hackathon Event" />
+          </div>
+          <h3 class="event-name">Hackathon</h3>
+        </div>
+        <div class="swiper-slide">
+          <div class="event-badge">Popular</div>
+          <div class="image-container">
+            <img src="1[1].jpg" alt="Project Expo Event" />
+          </div>
+          <h3 class="event-name">Project Expo</h3>
+        </div>
+        <div class="swiper-slide">
+          <div class="event-badge">New</div>
+          <div class="image-container">
+            <img src="1[1].jpg" alt="Workshop Event" />
+          </div>
+          <h3 class="event-name">Workshop</h3>
+        </div>
+        <div class="swiper-slide">
+          <div class="event-badge">Cultural</div>
+          <div class="image-container">
+            <img src="1[1].jpg" alt="Garba Event" />
+          </div>
+          <h3 class="event-name">Garba Night</h3>
+        </div>
+        <div class="swiper-slide">
+          <div class="event-badge">Tech</div>
+          <div class="image-container">
+            <img src="1[1].jpg" alt="Tech Talk Event" />
+          </div>
+          <h3 class="event-name">Tech Talk</h3>
+        </div>
+        <div class="swiper-slide">
+          <div class="event-badge">Special</div>
+          <div class="image-container">
+            <img src="1[1].jpg" alt="Cultural Night Event" />
+          </div>
+          <h3 class="event-name">Cultural Night</h3>
+        </div>
+        <div class="swiper-slide">
+          <div class="event-badge">Competition</div>
+          <div class="image-container">
+            <img src="1[1].jpg" alt="Code Sprint Event" />
+          </div>
+          <h3 class="event-name">Code Sprint</h3>
+        </div>
+        <div class="swiper-slide">
+          <div class="event-badge">Exhibition</div>
+          <div class="image-container">
+            <img src="1[1].jpg" alt="Innovation Fair Event" />
+          </div>
+          <h3 class="event-name">Innovation Fair</h3>
+        </div>
+        <div class="swiper-slide">
+          <div class="event-badge">Gaming</div>
+          <div class="image-container">
+            <img src="1[1].jpg" alt="Gaming Tournament Event" />
+          </div>
+          <h3 class="event-name">Gaming Arena</h3>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <!-- ===== Event Section End ===== -->
+
     <!-- FAQ Section Start -->
-<section id="faq" class="py-16 relative z-10 text-center">
-  <h2 class="text-4xl font-bold mb-6 glow-text text-indigo-400">FAQ</h2>
+<section id="faq" class="faq-section">
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <p class="section-subtitle">Get answers to common queries</p>
 
-  <div class="max-w-2xl mx-auto space-y-6">
+  <div class="faq-container">
 
     <!-- Participation Fee -->
     <div class="faq-item">
@@ -550,16 +442,16 @@
 <!-- FAQ Section End -->
 
     <!-- Registration Section start -->
-    <section id="register" class="py-16 relative z-10 text-center">
-      <h2 class="text-4xl font-bold mb-4 glow-text">Register Now</h2>
-      <p class="mb-6">Secure your spot by registering here.</p>
+    <section id="register" class="register-section">
+      <h2 class="section-title">Register Now</h2>
+      <p class="section-subtitle">Secure your spot by registering here</p>
       <a
         href="YOUR_GOOGLE_FORM_LINK"
         target="_blank"
-        class="login-btn relative inline-block px-6 py-3 font-bold rounded"
+        class="horizon-btn"
       >
         <span>Register</span>
-        <div class="btn-glow absolute top-0 left-0 w-full h-full"></div>
+        <div class="btn-glow"></div>
       </a>
     </section>
     <!-- Registration Section end -->
@@ -588,19 +480,20 @@
     <div class="footer-middle">
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Timeline</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">FAQ</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
 
     <!-- RIGHT SECTION -->
     <div class="footer-right">
       <h3>Contact</h3>
-      <p><i class="fas fa-envelope">Email : ieee@vgecg.ac.in</i></p>
-      <p><i class="fas fa-phone"></i></p>
+      <p><i class="fas fa-envelope"></i> Email: ieee@vgecg.ac.in</p>
+      <p><i class="fas fa-phone"></i> Phone: Prapti Shah +91 93137 68589</p>
+      <p><i class="fas fa-phone"></i> Phone: krish Kabra +91 92655 88715</p>
       <p><i class="fas fa-map-marker-alt"></i> VGEC, Chandkheda, Gujarat</p>
     </div>
 
@@ -608,7 +501,7 @@
 
   <div class="footer-bottom">
     <p>© 2026 HORIZON 1.0 | All Rights Reserved</p>
-    <span>Innovate. Create. Dominate.</span>
+    <span>Innovate. Create. Inspire.</span>
   </div>
 
 </footer>

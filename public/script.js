@@ -38,24 +38,24 @@ setInterval(() => {
 }, 1000);
 
 
-// Initialize particles.js with hover disabled
+// Initialize particles.js with Horizon New Dawn theme
 particlesJS("particles-js", {
   particles: {
     number: { value: 80, density: { enable: true, value_area: 800 } },
-    color: { value: "#00d4ff" },
+    color: { value: "#ff6b00" }, // Orange from New Dawn palette
     shape: { type: "circle" },
     opacity: { value: 0.5, random: true },
-    size: { value: 2, random: true },
+    size: { value: 3, random: true },
     line_linked: {
       enable: true,
       distance: 150,
-      color: "#00d4ff",
+      color: "#8a2be2", // Purple from New Dawn palette
       opacity: 0.4,
       width: 1,
     },
     move: {
       enable: true,
-      speed: 3,
+      speed: 2,
       direction: "none",
       random: true,
       straight: false,
@@ -118,23 +118,42 @@ if (hamburger && sidebar && closeBtn) {
 }
 
 // ===== Initialize Swiper for Event Section =====
-var swiper = new Swiper(".mySwiper", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  coverflowEffect: {
-    rotate: 30,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
+ var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      speed: 1000,
+      loop: true,
+      grabCursor: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 20
+        },
+        480: {
+          slidesPerView: 1.5,
+          spaceBetween: 20
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 25
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        }
+      }
+    });
+
+    
 
 // FAQ Accordion Functionality
 const faqItems = document.querySelectorAll(".faq-item");
