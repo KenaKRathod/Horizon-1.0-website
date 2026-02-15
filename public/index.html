@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,8 +6,11 @@
     <title>HORIZON 1.0 - New Dawn to Build Upon</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
@@ -17,6 +20,11 @@
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="font-sans text-white relative overflow-x-hidden">
     <!-- Particles Background -->
@@ -24,31 +32,34 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-  <div class="nav-container">
+      <div class="nav-container">
+        <!-- Logo -->
+        <img
+          src="./ChatGPT_Image_Feb_14__2026__04_25_30_PM-removebg-preview.png"
+          alt="Horizon Logo"
+          class="nav-logo"
+        />
 
-    <!-- Logo -->
-    <img
-      src="./ChatGPT_Image_Feb_14__2026__04_25_30_PM-removebg-preview.png"
-      alt="Horizon Logo"
-      class="nav-logo"
-    />
+        <!-- Desktop Links -->
+        <div class="nav-links">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#timeline" class="nav-link">Timeline</a>
+          <a href="#events" class="nav-link">Events</a>
+          <a href="#rulebook" class="nav-link">Rulebook</a>
+          <a href="#prizes" class="nav-link">Prizes</a>
+          <a href="#faq" class="nav-link">FAQ</a>
+          <a href="#events" class="nav-link-cta">
+            <span>Register Now</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
 
-    <!-- Desktop Links -->
-    <div class="nav-links">
-      <a href="#home" class="nav-link">Home</a>
-      <a href="#timeline" class="nav-link">Timeline</a>
-      <a href="#events" class="nav-link">Events</a>
-      <a href="#faq" class="nav-link">FAQ</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </div>
-
-    <!-- Mobile Hamburger -->
-    <button id="hamburger" class="hamburger">
-      <i class="fas fa-bars"></i>
-    </button>
-
-  </div>
-</nav>
+        <!-- Mobile Hamburger -->
+        <button id="hamburger" class="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
 
     <!-- Mobile Sidebar -->
     <div id="mobile-sidebar" class="mobile-sidebar">
@@ -62,8 +73,12 @@
         <a href="#home" class="sidebar-link">Home</a>
         <a href="#timeline" class="sidebar-link">Timeline</a>
         <a href="#events" class="sidebar-link">Events</a>
+        <a href="#rulebook" class="sidebar-link">Rulebook</a>
+        <a href="#prizes" class="sidebar-link">Prizes</a>
         <a href="#faq" class="sidebar-link">FAQ</a>
-        <a href="#contact" class="sidebar-link">Contact</a>
+        <a href="#events" class="sidebar-link sidebar-link-cta">
+          Register Now <i class="fas fa-arrow-right"></i>
+        </a>
       </div>
     </div>
 
@@ -76,437 +91,815 @@
           class="hero-logo"
         />
       </div>
-      <h3 class="hero-title">
-        "Celebrate IEEE Fest 2026!" 
-      </h3>
+      <h3 class="hero-title">"Celebrate IEEE Fest 2026!"</h3>
       <p class="hero-description">
-        Join us on 20th Feb! Participate in engaging
-        events, workshops, and fun activities designed to inspire creativity and
-        collaboration. Learn from experts, connect with peers, and be part of
-        the legacy of innovation.
+        Join us on 20th Feb! Participate in engaging events, workshops, and fun
+        activities designed to inspire creativity and collaboration. Learn from
+        experts, connect with peers, and be part of the legacy of innovation.
       </p>
-      
-      <!-- Registration & Explore Section start -->
+
+      <!-- Registration & Explore Section -->
       <section class="hero-buttons">
-        <a
-          href="YOUR_GOOGLE_FORM_LINK"
-          target="_blank"
-          class="horizon-btn"
-        >
-          <span>Register</span>
+        <a href="#events" class="horizon-btn register-btn">
+          <span>Register Now</span>
+          <i class="fas fa-arrow-right btn-icon"></i>
           <div class="btn-glow"></div>
         </a>
-        <a
-          href="#timeline"
-          class="horizon-btn"
-        >
+        <a href="#timeline" class="horizon-btn">
           <span>Explore</span>
+          <i class="fas fa-compass btn-icon"></i>
           <div class="btn-glow"></div>
         </a>
       </section>
-      <!-- Registration & Explore Section end -->
 
       <!-- Countdown Section -->
-<section class="countdown-section">
-  <div class="countdown-container">
-
-    <div class="time-card">
-      <svg class="progress-ring" width="140" height="140">
-        <circle class="progress-bg" cx="70" cy="70" r="60"/>
-        <circle class="progress-circle" id="days-circle" cx="70" cy="70" r="60"/>
-      </svg>
-      <div class="time-content">
-        <h2 id="days">00</h2>
-        <p>Days</p>
-      </div>
-    </div>
-
-    <div class="time-card">
-      <svg class="progress-ring" width="140" height="140">
-        <circle class="progress-bg" cx="70" cy="70" r="60"/>
-        <circle class="progress-circle" id="hours-circle" cx="70" cy="70" r="60"/>
-      </svg>
-      <div class="time-content">
-        <h2 id="hours">00</h2>
-        <p>Hours</p>
-      </div>
-    </div>
-
-    <div class="time-card">
-      <svg class="progress-ring" width="140" height="140">
-        <circle class="progress-bg" cx="70" cy="70" r="60"/>
-        <circle class="progress-circle" id="minutes-circle" cx="70" cy="70" r="60"/>
-      </svg>
-      <div class="time-content">
-        <h2 id="minutes">00</h2>
-        <p>Minutes</p>
-      </div>
-    </div>
-
-    <div class="time-card">
-      <svg class="progress-ring" width="140" height="140">
-        <circle class="progress-bg" cx="70" cy="70" r="60"/>
-        <circle class="progress-circle" id="seconds-circle" cx="70" cy="70" r="60"/>
-      </svg>
-      <div class="time-content">
-        <h2 id="seconds">00</h2>
-        <p>Seconds</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-</section>
-
-
-    <!-- timeline section start -->
-    <section id="timeline" class="timeline-section">
-      <div class="section-header">
-        <h2 class="section-title">Event Timeline</h2>
-        <p class="section-subtitle">Know what's happening when!</p>
-      </div>
-      <div class="timeline-wrapper">
-        <!-- Timeline vertical line for desktop -->
-        <div class="timeline-line"></div>
-        
-        <div class="timeline-events">
-          <!-- Treasure Hunt Event Box -->
-          <div class="timeline-item left">
-            <div class="timeline-card animate-fade-in-left">
-              <div class="timeline-icon">
-                <i class="fas fa-search"></i>
-              </div>
-              <div class="timeline-content">
-                <h3 class="timeline-time">9:00 AM – 10:30 AM</h3>
-                <p class="timeline-event-name">Treasure Hunt</p>
-                <ul class="timeline-details">
-                  <li>10 teams, 4 members each</li>
-                  <li>Location: Across VGEC</li>
-                  <li>Fees: ₹100 per team</li>
-                </ul>
-              </div>
+      <section class="countdown-section">
+        <h3 class="countdown-title">Event Countdown</h3>
+        <div class="countdown-container">
+          <div class="time-card">
+            <svg class="progress-ring" width="160" height="160">
+              <defs>
+                <linearGradient
+                  id="gradient-days"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style="stop-color: #ff6b00; stop-opacity: 1"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color: #8a2be2; stop-opacity: 1"
+                  />
+                </linearGradient>
+              </defs>
+              <circle class="progress-bg" cx="80" cy="80" r="70" />
+              <circle
+                class="progress-circle"
+                id="days-circle"
+                cx="80"
+                cy="80"
+                r="70"
+                stroke="url(#gradient-days)"
+              />
+            </svg>
+            <div class="time-content">
+              <h2 id="days">00</h2>
+              <p>Days</p>
             </div>
           </div>
 
-          <!-- DRDO Seminar Event Box -->
-          <div class="timeline-item right">
-            <div class="timeline-card animate-fade-in-right">
-              <div class="timeline-icon">
-                <i class="fas fa-chalkboard-teacher"></i>
-              </div>
-              <div class="timeline-content">
-                <h3 class="timeline-time">11:00 AM – 12:00 PM</h3>
-                <p class="timeline-event-name">DRDO Seminar</p>
-                <ul class="timeline-details">
-                  <li>Expert talk on defense technology</li>
-                  <li>Location: Main Auditorium</li>
-                  <li>Free for all students</li>
-                </ul>
-              </div>
+          <div class="time-card">
+            <svg class="progress-ring" width="160" height="160">
+              <defs>
+                <linearGradient
+                  id="gradient-hours"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style="stop-color: #ff6b00; stop-opacity: 1"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color: #8a2be2; stop-opacity: 1"
+                  />
+                </linearGradient>
+              </defs>
+              <circle class="progress-bg" cx="80" cy="80" r="70" />
+              <circle
+                class="progress-circle"
+                id="hours-circle"
+                cx="80"
+                cy="80"
+                r="70"
+                stroke="url(#gradient-hours)"
+              />
+            </svg>
+            <div class="time-content">
+              <h2 id="hours">00</h2>
+              <p>Hours</p>
             </div>
           </div>
 
-          <!-- Fun Event 1 -->
-          <div class="timeline-item left">
-            <div class="timeline-card animate-fade-in-left">
-              <div class="timeline-icon">
-                <i class="fas fa-gamepad"></i>
-              </div>
-              <div class="timeline-content">
-                <h3 class="timeline-time">12:30 PM – 1:30 PM</h3>
-                <p class="timeline-event-name">Logo Quiz & Binary Bingo</p>
-                <ul class="timeline-details">
-                  <li>Test your knowledge</li>
-                  <li>Fun gaming activities</li>
-                  <li>Exciting prizes</li>
-                </ul>
-              </div>
+          <div class="time-card">
+            <svg class="progress-ring" width="160" height="160">
+              <defs>
+                <linearGradient
+                  id="gradient-minutes"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style="stop-color: #ff6b00; stop-opacity: 1"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color: #8a2be2; stop-opacity: 1"
+                  />
+                </linearGradient>
+              </defs>
+              <circle class="progress-bg" cx="80" cy="80" r="70" />
+              <circle
+                class="progress-circle"
+                id="minutes-circle"
+                cx="80"
+                cy="80"
+                r="70"
+                stroke="url(#gradient-minutes)"
+              />
+            </svg>
+            <div class="time-content">
+              <h2 id="minutes">00</h2>
+              <p>Minutes</p>
             </div>
           </div>
 
-          <!-- Lunch Break -->
-          <div class="timeline-item right">
-            <div class="timeline-card animate-fade-in-right">
-              <div class="timeline-icon">
-                <i class="fas fa-utensils"></i>
-              </div>
-              <div class="timeline-content">
-                <h3 class="timeline-time">1:30 PM – 2:30 PM</h3>
-                <p class="timeline-event-name">Lunch Break</p>
-                <ul class="timeline-details">
-                  <li>Refreshments available</li>
-                  <li>Network with peers</li>
-                </ul>
-              </div>
+          <div class="time-card">
+            <svg class="progress-ring" width="160" height="160">
+              <defs>
+                <linearGradient
+                  id="gradient-seconds"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="100%"
+                >
+                  <stop
+                    offset="0%"
+                    style="stop-color: #ff6b00; stop-opacity: 1"
+                  />
+                  <stop
+                    offset="100%"
+                    style="stop-color: #8a2be2; stop-opacity: 1"
+                  />
+                </linearGradient>
+              </defs>
+              <circle class="progress-bg" cx="80" cy="80" r="70" />
+              <circle
+                class="progress-circle"
+                id="seconds-circle"
+                cx="80"
+                cy="80"
+                r="70"
+                stroke="url(#gradient-seconds)"
+              />
+            </svg>
+            <div class="time-content">
+              <h2 id="seconds">00</h2>
+              <p>Seconds</p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <!-- Fun Event 2 -->
-          <div class="timeline-item left">
-            <div class="timeline-card animate-fade-in-left">
-              <div class="timeline-icon">
-                <i class="fas fa-palette"></i>
-              </div>
-              <div class="timeline-content">
-                <h3 class="timeline-time">2:30 PM – 4:00 PM</h3>
-                <p class="timeline-event-name">Creative Activities</p>
-                <ul class="timeline-details">
-                  <li>Tech Pictionary</li>
-                  <li>Blind Drawing Challenge</li>
-                  <li>Paper Plane Competition</li>
-                </ul>
-              </div>
+      <!-- Quick Info Cards -->
+      <section class="quick-info-section">
+        <div class="info-cards-container">
+          <div class="info-card scroll-reveal">
+            <div class="info-icon">
+              <i class="fas fa-calendar-alt"></i>
             </div>
+            <h4>Event Date</h4>
+            <p>February 20, 2026</p>
           </div>
 
-          <!-- Closing Ceremony -->
-          <div class="timeline-item right">
-            <div class="timeline-card animate-fade-in-right">
-              <div class="timeline-icon">
-                <i class="fas fa-trophy"></i>
-              </div>
-              <div class="timeline-content">
-                <h3 class="timeline-time">4:00 PM – 5:00 PM</h3>
-                <p class="timeline-event-name">Prize Distribution</p>
-                <ul class="timeline-details">
-                  <li>Award ceremony</li>
-                  <li>Closing remarks</li>
-                  <li>Group photos</li>
-                </ul>
-              </div>
+          <div class="info-card scroll-reveal">
+            <div class="info-icon">
+              <i class="fas fa-map-marker-alt"></i>
             </div>
+            <h4>Venue</h4>
+            <p>VGEC Campus, Chandkheda</p>
           </div>
 
+          <div class="info-card scroll-reveal">
+            <div class="info-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h4>Participants</h4>
+            <p>All VGEC Students</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Timeline Section -->
+    <section
+      id="timeline"
+      class="timeline-section"
+      style="scroll-margin-top: 80px"
+    >
+      <h2 class="section-title">Event Timeline</h2>
+      <p class="section-subtitle">Full day schedule - February 20, 2026</p>
+
+      <div class="timeline">
+        <div class="timeline-item left animate-fade-in-left">
+          <div class="timeline-content">
+            <div class="timeline-time">9:00 AM</div>
+            <h3>
+              <i class="fas fa-door-open"></i> Registration & Inauguration
+            </h3>
+            <p>
+              Kick-off the fest with registration and opening ceremony. Meet
+              fellow participants and get ready for an exciting day!
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item right animate-fade-in-right">
+          <div class="timeline-content">
+            <div class="timeline-time">10:00 AM</div>
+            <h3><i class="fas fa-search"></i> HUNT-A-THON Begins</h3>
+            <p>
+              The ultimate treasure hunt starts! Follow clues, solve puzzles,
+              and race against time to find the hidden treasures.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item left animate-fade-in-left">
+          <div class="timeline-content">
+            <div class="timeline-time">11:00 AM</div>
+            <h3><i class="fas fa-microphone"></i> Tech Talk Session</h3>
+            <p>
+              Inspiring talks from tech leaders. Learn about cutting-edge
+              technologies and career opportunities in tech.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item right animate-fade-in-right">
+          <div class="timeline-content">
+            <div class="timeline-time">12:30 PM</div>
+            <h3><i class="fas fa-utensils"></i> Lunch Break & Stalls</h3>
+            <p>
+              Enjoy delicious food and explore non-food stalls. Network with
+              peers and recharge for afternoon activities.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item left animate-fade-in-left">
+          <div class="timeline-content">
+            <div class="timeline-time">2:00 PM</div>
+            <h3><i class="fas fa-gamepad"></i> GAMES GALA & THINK BITS</h3>
+            <p>
+              Minute to win it games and technical challenges. Test your skills
+              in both fun and brainy competitions!
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item right animate-fade-in-right">
+          <div class="timeline-content">
+            <div class="timeline-time">4:00 PM</div>
+            <h3><i class="fas fa-trophy"></i> Prize Distribution</h3>
+            <p>
+              Winners announced and prizes awarded. Celebrate the achievements
+              of all participants!
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item left animate-fade-in-left">
+          <div class="timeline-content">
+            <div class="timeline-time">6:00 PM</div>
+            <h3><i class="fas fa-music"></i> Cultural Evening</h3>
+            <p>
+              Jamming session and Garba night. Dance, music, and celebration as
+              we close the fest in style!
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Events Section -->
-  <!-- ===== Event Section Start ===== -->
-  <section id="event-section">
-    <!-- Animated particles -->
-    <div class="particles">
-      <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
-      <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
-      <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
-      <div class="particle" style="left: 40%; animation-delay: 1s;"></div>
-      <div class="particle" style="left: 50%; animation-delay: 3s;"></div>
-      <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
-      <div class="particle" style="left: 70%; animation-delay: 2.5s;"></div>
-      <div class="particle" style="left: 80%; animation-delay: 4.5s;"></div>
-      <div class="particle" style="left: 90%; animation-delay: 1.5s;"></div>
-    </div>
-
-    <h2 class="event-title">Our Events</h2>
-    <p class="event-subtitle">A New Dawn of Innovation</p>
-
-    <!-- Swiper Container -->
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="event-badge">Featured</div>
-          <div class="image-container">
-            <img src="1[1].jpg" alt="Hackathon Event" />
-          </div>
-          <h3 class="event-name">Hackathon</h3>
-        </div>
-        <div class="swiper-slide">
-          <div class="event-badge">Popular</div>
-          <div class="image-container">
-            <img src="1[1].jpg" alt="Project Expo Event" />
-          </div>
-          <h3 class="event-name">Project Expo</h3>
-        </div>
-        <div class="swiper-slide">
-          <div class="event-badge">New</div>
-          <div class="image-container">
-            <img src="1[1].jpg" alt="Workshop Event" />
-          </div>
-          <h3 class="event-name">Workshop</h3>
-        </div>
-        <div class="swiper-slide">
-          <div class="event-badge">Cultural</div>
-          <div class="image-container">
-            <img src="1[1].jpg" alt="Garba Event" />
-          </div>
-          <h3 class="event-name">Garba Night</h3>
-        </div>
-        <div class="swiper-slide">
-          <div class="event-badge">Tech</div>
-          <div class="image-container">
-            <img src="1[1].jpg" alt="Tech Talk Event" />
-          </div>
-          <h3 class="event-name">Tech Talk</h3>
-        </div>
-        <div class="swiper-slide">
-          <div class="event-badge">Special</div>
-          <div class="image-container">
-            <img src="1[1].jpg" alt="Cultural Night Event" />
-          </div>
-          <h3 class="event-name">Cultural Night</h3>
-        </div>
-        <div class="swiper-slide">
-          <div class="event-badge">Competition</div>
-          <div class="image-container">
-            <img src="1[1].jpg" alt="Code Sprint Event" />
-          </div>
-          <h3 class="event-name">Code Sprint</h3>
-        </div>
-        <div class="swiper-slide">
-          <div class="event-badge">Exhibition</div>
-          <div class="image-container">
-            <img src="1[1].jpg" alt="Innovation Fair Event" />
-          </div>
-          <h3 class="event-name">Innovation Fair</h3>
-        </div>
-        <div class="swiper-slide">
-          <div class="event-badge">Gaming</div>
-          <div class="image-container">
-            <img src="1[1].jpg" alt="Gaming Tournament Event" />
-          </div>
-          <h3 class="event-name">Gaming Arena</h3>
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
-  <!-- ===== Event Section End ===== -->
-
-    <!-- FAQ Section Start -->
-<section id="faq" class="faq-section">
-  <h2 class="section-title">Frequently Asked Questions</h2>
-  <p class="section-subtitle">Get answers to common queries</p>
-
-  <div class="faq-container">
-
-    <!-- Participation Fee -->
-    <div class="faq-item">
-      <button class="faq-question">
-        What is the participation fee?
-        <span class="faq-toggle">+</span>
-      </button>
-      <div class="faq-answer">
-        Some events have a nominal participation fee (e.g., Treasure Hunt: ₹100 per team).
-        Most IEEE Fest activities are free.
-      </div>
-    </div>
-
-    <!-- Games -->
-    <div class="faq-item">
-      <button class="faq-question">
-        What are the games in the IEEE Fest?
-        <span class="faq-toggle">+</span>
-      </button>
-      <div class="faq-answer">
-        Games include Treasure Hunt, Logo Quiz, Binary Bingo, Tech Pictionary,
-        Balloon Pop, Paper Plane Challenge, Cookie Game, Blind Drawing and more.
-      </div>
-    </div>
-
-    <!-- Prizes -->
-    <div class="faq-item">
-      <button class="faq-question">
-        What are the prizes and benefits?
-        <span class="faq-toggle">+</span>
-      </button>
-      <div class="faq-answer">
-        Winners receive exciting prizes, certificates, and recognition.
-        Participants gain networking opportunities and technical exposure.
-      </div>
-    </div>
-
-    <!-- Register -->
-    <div class="faq-item">
-      <button class="faq-question">
-        How do I register?
-        <span class="faq-toggle">+</span>
-      </button>
-      <div class="faq-answer">
-        Click on the "Register" button above and fill out the Google Form.
-      </div>
-    </div>
-
-    <!-- Who can participate -->
-    <div class="faq-item">
-      <button class="faq-question">
-        Who can participate?
-        <span class="faq-toggle">+</span>
-      </button>
-      <div class="faq-answer">
-        All VGEC students can participate. Some events may have team or individual rules.
-      </div>
-    </div>
-
-  </div>
-</section>
-<!-- FAQ Section End -->
-
-    <!-- Registration Section start -->
-    <section id="register" class="register-section">
-      <h2 class="section-title">Register Now</h2>
-      <p class="section-subtitle">Secure your spot by registering here</p>
-      <a
-        href="YOUR_GOOGLE_FORM_LINK"
-        target="_blank"
-        class="horizon-btn"
-      >
-        <span>Register</span>
-        <div class="btn-glow"></div>
-      </a>
-    </section>
-    <!-- Registration Section end -->
-
-    <!-- Footer Start-->
-   <footer class="footer">
-
-  <div class="footer-wrapper">
-
-    <!-- LEFT SECTION -->
-    <div class="footer-left">
-      <h2>HORIZON 1.0</h2>
-      <p>
-        The ultimate IEEE fest celebration with innovation,
-        fun, and collaboration.
+    <section
+      id="events"
+      class="events-section scroll-reveal-team"
+      style="scroll-margin-top: 80px"
+    >
+      <h2 class="section-title">Our Events</h2>
+      <p class="section-subtitle">
+        Explore exciting competitions and activities
       </p>
 
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Event 1: HUNT-A-THON -->
+          <div
+            class="swiper-slide event-card"
+            onclick="openEventModal('huntathon')"
+          >
+            <div class="event-icon">
+              <i class="fas fa-search"></i>
+            </div>
+            <h3>HUNT-A-THON</h3>
+            <p>Ultimate treasure hunt with exciting challenges and clues</p>
+            <div class="event-badge">Teams of 4</div>
+          </div>
+
+          <!-- Event 2: Tech Talk -->
+          <div
+            class="swiper-slide event-card"
+            onclick="openEventModal('techtalk')"
+          >
+            <div class="event-icon">
+              <i class="fas fa-microphone-alt"></i>
+            </div>
+            <h3>Tech Talk</h3>
+            <p>Technical sessions by industry experts and innovators</p>
+            <div class="event-badge">Individual</div>
+          </div>
+
+          <!-- Event 3: Food & Stalls -->
+          <div
+            class="swiper-slide event-card"
+            onclick="openEventModal('stalls')"
+          >
+            <div class="event-icon">
+              <i class="fas fa-store"></i>
+            </div>
+            <h3>Food & Stalls</h3>
+            <p>Delicious food stalls and exciting merchandise booths</p>
+            <div class="event-badge">Open to All</div>
+          </div>
+
+          <!-- Event 4: GAMES GALA -->
+          <div
+            class="swiper-slide event-card"
+            onclick="openEventModal('gamesgala')"
+          >
+            <div class="event-icon">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h3>GAMES GALA</h3>
+            <p>Minute to win it games - fast, fun, and competitive!</p>
+            <div class="event-badge">Individual</div>
+          </div>
+
+          <!-- Event 5: THINK BITS -->
+          <div
+            class="swiper-slide event-card"
+            onclick="openEventModal('thinkbits')"
+          >
+            <div class="event-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3>THINK BITS</h3>
+            <p>Technical games testing your logic and problem-solving</p>
+            <div class="event-badge">Individual/Teams</div>
+          </div>
+
+          <!-- Event 6: Cultural Evening -->
+          <div
+            class="swiper-slide event-card"
+            onclick="openEventModal('cultural')"
+          >
+            <div class="event-icon">
+              <i class="fas fa-music"></i>
+            </div>
+            <h3>Cultural Evening</h3>
+            <p>Jamming and Garba session - dance the night away!</p>
+            <div class="event-badge">Open to All</div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Event Modal -->
+    <div id="event-modal" class="event-modal">
+      <div class="event-modal-overlay" onclick="closeEventModal()"></div>
+      <div class="event-modal-container">
+        <button class="event-modal-close" onclick="closeEventModal()">
+          <i class="fas fa-times"></i>
+        </button>
+        <div id="event-modal-content" class="event-modal-content">
+          <!-- Content will be dynamically inserted -->
+        </div>
       </div>
     </div>
 
-    <!-- MIDDLE SECTION -->
-    <div class="footer-middle">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#timeline">Timeline</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+    <!-- Rulebook Section -->
+    <section
+      id="rulebook"
+      class="rulebook-section scroll-reveal-team"
+      style="scroll-margin-top: 80px"
+    >
+      <h2 class="section-title">Rulebook & Guidelines</h2>
+      <p class="section-subtitle">Important rules and registration process</p>
 
-    <!-- RIGHT SECTION -->
-    <div class="footer-right">
-      <h3>Contact</h3>
-      <p><i class="fas fa-envelope"></i> Email: ieee@vgecg.ac.in</p>
-      <p><i class="fas fa-phone"></i> Phone: Prapti Shah +91 93137 68589</p>
-      <p><i class="fas fa-phone"></i> Phone: krish Kabra +91 92655 88715</p>
-      <p><i class="fas fa-map-marker-alt"></i> VGEC, Chandkheda, Gujarat</p>
-    </div>
+      <div class="rulebook-container">
+        <!-- General Rules -->
+        <div class="rulebook-card">
+          <div class="rulebook-header" onclick="toggleRulebook('general')">
+            <div class="rulebook-icon">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3>General Rules</h3>
+            <span class="rulebook-toggle" id="toggle-general">+</span>
+          </div>
+          <div class="rulebook-content" id="content-general">
+            <ul class="rulebook-list">
+              <li>
+                <i class="fas fa-check-circle"></i> All participants must be
+                VGEC students with valid ID cards.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Registration is mandatory
+                for all events before the deadline.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Follow event timings
+                strictly. Late arrivals may be disqualified.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Maintain discipline and
+                respect event organizers and volunteers.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> No unfair means, cheating,
+                or misconduct will be tolerated.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Decisions of judges and
+                organizers are final and binding.
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Participants are responsible
+                for their personal belongings.
+              </li>
+            </ul>
+          </div>
+        </div>
 
-  </div>
+        <!-- Event-Specific Rules -->
+        <div class="rulebook-card">
+          <div class="rulebook-header" onclick="toggleRulebook('event')">
+            <div class="rulebook-icon">
+              <i class="fas fa-gamepad"></i>
+            </div>
+            <h3>Event-Specific Rules</h3>
+            <span class="rulebook-toggle" id="toggle-event">+</span>
+          </div>
+          <div class="rulebook-content" id="content-event">
+            <div class="event-rules-section">
+              <h4><i class="fas fa-search"></i> HUNT-A-THON</h4>
+              <ul class="rulebook-list">
+                <li>
+                  <i class="fas fa-users"></i> Teams of exactly 4 members
+                  required.
+                </li>
+                <li>
+                  <i class="fas fa-rupee-sign"></i> Registration fee: ₹100 per
+                  team.
+                </li>
+                <li>
+                  <i class="fas fa-clock"></i> Time limit will be announced at
+                  the start.
+                </li>
+                <li>
+                  <i class="fas fa-ban"></i> No use of external help or digital
+                  tools for clues.
+                </li>
+              </ul>
+            </div>
 
-  <div class="footer-bottom">
-    <p>© 2026 HORIZON 1.0 | All Rights Reserved</p>
-    <span>Innovate. Create. Inspire.</span>
-  </div>
+            <div class="event-rules-section">
+              <h4><i class="fas fa-trophy"></i> GAMES GALA & THINK BITS</h4>
+              <ul class="rulebook-list">
+                <li>
+                  <i class="fas fa-user"></i> Individual or team participation
+                  based on game.
+                </li>
+                <li><i class="fas fa-free"></i> Free entry for most games.</li>
+                <li>
+                  <i class="fas fa-hourglass-start"></i> Each game has specific
+                  time limits.
+                </li>
+                <li>
+                  <i class="fas fa-redo"></i> No retries unless specified by
+                  organizers.
+                </li>
+              </ul>
+            </div>
 
-</footer>
-    <!-- Footer End -->
+            <div class="event-rules-section">
+              <h4><i class="fas fa-music"></i> Cultural Evening</h4>
+              <ul class="rulebook-list">
+                <li>
+                  <i class="fas fa-id-card"></i> Valid college ID mandatory for
+                  entry.
+                </li>
+                <li>
+                  <i class="fas fa-tshirt"></i> Traditional attire encouraged
+                  for Garba.
+                </li>
+                <li>
+                  <i class="fas fa-volume-mute"></i> Maintain decorum during
+                  performances.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-    <script src="script.js"></script>
+        <!-- Registration Process -->
+        <div class="rulebook-card">
+          <div class="rulebook-header" onclick="toggleRulebook('registration')">
+            <div class="rulebook-icon">
+              <i class="fas fa-clipboard-list"></i>
+            </div>
+            <h3>Registration Process</h3>
+            <span class="rulebook-toggle" id="toggle-registration">+</span>
+          </div>
+          <div class="rulebook-content" id="content-registration">
+            <div class="registration-steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Fill Registration Form</h4>
+                  <p>
+                    Click on "Register Now" and complete the online form with
+                    accurate details.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Select Your Events</h4>
+                  <p>
+                    Choose the events you want to participate in and form your
+                    team if required.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Pay Registration Fee (if applicable)</h4>
+                  <p>
+                    Some events like HUNT-A-THON require a nominal fee. Payment
+                    details will be provided.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Receive Confirmation</h4>
+                  <p>
+                    You'll receive a confirmation email with your registration
+                    details and further instructions.
+                  </p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                  <h4>Attend on Event Day</h4>
+                  <p>
+                    Bring your college ID and confirmation email. Report to the
+                    registration desk on February 20, 2026.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prizes Section -->
+    <section
+      id="prizes"
+      class="prizes-section scroll-reveal-team"
+      style="scroll-margin-top: 80px"
+    >
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 glow-text horizon-gradient-text title-font"
+          style="
+            font-family: &quot;Orbitron&quot;, sans-serif;
+            text-align: center;
+          "
+        >
+          PRIZES & BENEFITS
+        </h2>
+        <p class="text-gray-300 text-lg md:text-xl mb-12 md:mb-16 text-center">
+          Compete. Win. Get Recognized.
+        </p>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-7xl mx-auto"
+        >
+          <div class="prize-card p-6 md:p-8 rounded-2xl">
+            <div class="text-5xl md:text-6xl mb-6 text-yellow-400">
+              <i class="fas fa-trophy"></i>
+            </div>
+            <h3
+              class="text-xl md:text-2xl font-bold mb-3 horizon-gradient-text"
+            >
+              Winner
+            </h3>
+            <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+              Cash Prize + Trophy + Certificate + Recognition on IEEE Platforms
+            </p>
+          </div>
+
+          <div class="prize-card p-6 md:p-8 rounded-2xl">
+            <div class="text-5xl md:text-6xl mb-6 prize-icon-silver">
+              <i class="fas fa-medal"></i>
+            </div>
+            <h3
+              class="text-xl md:text-2xl font-bold mb-3 horizon-gradient-text"
+            >
+              Runner-Up
+            </h3>
+            <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+              Cash Prize + Certificate + Special Mention
+            </p>
+          </div>
+
+          <div class="prize-card p-6 md:p-8 rounded-2xl">
+            <div class="text-5xl md:text-6xl mb-6 prize-icon-pink">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3
+              class="text-xl md:text-2xl font-bold mb-3 horizon-gradient-text"
+            >
+              Special Mentions
+            </h3>
+            <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+              Exciting Goodies + Certificate of Excellence
+            </p>
+          </div>
+
+          <div class="prize-card p-6 md:p-8 rounded-2xl">
+            <div class="text-5xl md:text-6xl mb-6 prize-icon-purple">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3
+              class="text-xl md:text-2xl font-bold mb-3 horizon-gradient-text"
+            >
+              All Participants
+            </h3>
+            <p class="text-gray-300 text-sm md:text-base leading-relaxed">
+              Participation Certificate + Networking + Exposure
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Get answers to common queries</p>
+
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">
+            What is the participation fee?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Some events have a nominal participation fee (e.g., Treasure Hunt:
+            ₹100 per team). Most IEEE Fest activities are free.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What are the games in the IEEE Fest?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Games include HUNT-A-THON (Treasure Hunt), GAMES GALA (Minute to Win
+            It), THINK BITS (Technical Games), and more exciting challenges
+            throughout the day.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What are the prizes and benefits?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Winners receive exciting prizes, certificates, and recognition.
+            Participants gain networking opportunities and technical exposure.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I register?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            Click on the "Register Now" button in the Events section and fill
+            out the form with your details. You'll receive confirmation via
+            email.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Who can participate?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            All VGEC students can participate. Some events may have team or
+            individual rules. Valid college ID is mandatory.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Registration CTA -->
+    <section class="final-cta-section">
+      <div class="cta-container">
+        <div class="cta-content">
+          <h2 class="cta-title">Ready for the New Dawn?</h2>
+          <p class="cta-description">
+            Join us at HORIZON 1.0 for an unforgettable experience filled with
+            innovation, fun, and endless possibilities. Be part of the legacy.
+            Be part of the future.
+          </p>
+          <a href="#events" class="cta-button">
+            <span>Register Now</span>
+            <i class="fas fa-rocket"></i>
+            <div class="btn-glow"></div>
+          </a>
+          <p class="cta-note">
+            <i class="fas fa-clock"></i> Registration closes on February 18,
+            2026
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="footer-wrapper">
+        <div class="footer-left">
+          <h2>HORIZON 1.0</h2>
+          <p>
+            The ultimate IEEE fest celebration with innovation, fun, and
+            collaboration.
+          </p>
+
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-middle">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#rulebook">Rulebook</a></li>
+            <li><a href="#prizes">Prizes</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-right">
+          <h3>Contact</h3>
+          <p><i class="fas fa-envelope"></i> Email: ieee@vgecg.ac.in</p>
+          <p><i class="fas fa-phone"></i> Prapti Shah: +91 93137 68589</p>
+          <p><i class="fas fa-phone"></i> Krish Kabra: +91 92655 88715</p>
+          <p><i class="fas fa-map-marker-alt"></i> VGEC, Chandkheda, Gujarat</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 HORIZON 1.0 | All Rights Reserved</p>
+        <span>Designed with <i class="fas fa-heart"></i> by IEEE VGEC</span>
+      </div>
+    </footer>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
