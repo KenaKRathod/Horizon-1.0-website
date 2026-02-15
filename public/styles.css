@@ -54,17 +54,17 @@ body {
 .nav-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 1.2rem 2.5rem;
+  padding: 1.8rem 2.5rem;   /* Increased from 1.2rem */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 4rem; /* Added spacing between logo and links */
+  gap: 4rem;
 }
 
 .nav-logo {
-  height: 55px;
+  height: 80px;      /* Increased size */
   width: auto;
-  filter: drop-shadow(0 0 15px rgba(255, 107, 0, 0.7));
+  filter: drop-shadow(0 0 20px rgba(255, 107, 0, 0.8));
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -273,9 +273,12 @@ body {
 }
 
 .hero-logo-container {
-  margin-bottom: 1rem;
-  animation: floatLogo 6s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
+
 
 @keyframes floatLogo {
   0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -284,10 +287,21 @@ body {
 }
 
 .hero-logo {
-  max-width: 100%;
+  width: 420px;        /* Increase size */
+  max-width: 90%;
   height: auto;
-  filter: drop-shadow(0 0 40px rgba(255, 107, 0, 0.7));
+  margin: 0 auto;
+  display: block;
+
+  /* Make it look premium */
+  filter: drop-shadow(0 0 25px rgba(255, 107, 0, 0.6));
+  transition: transform 0.4s ease;
 }
+
+.hero-logo:hover {
+  transform: scale(1.05);
+}
+
 
 .hero-title {
   font-family: 'Orbitron', sans-serif;
