@@ -5,9 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HORIZON 1.0 - New Dawn to Build Upon</title>
-  <!-- Google Fonts for Team Section -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-    rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <link rel="stylesheet" href="style.css" />
@@ -358,229 +356,66 @@
 
     <!-- Events Section End -->
 
-    <!-- Team Committee Section Start -->
-    <section id="team" class="py-16 relative z-10 bg-transparent overflow-hidden">
-      <div class="container mx-auto px-4 h-full">
-        <div class="flex flex-col md:flex-row items-center justify-center h-full gap-12">
 
-          <!-- Left Side: Typography -->
-          <div class="w-full md:w-1/2 text-left z-20">
-            <h2 class="text-6xl md:text-8xl text-white tracking-wide leading-tight">
-              MEET<br>
-              <span class="italic text-gray-400 font-light">OUR</span><br>
-              TEAM
-            </h2>
-            <div class="mt-8">
-              <h3 class="text-3xl text-white" id="team-member-name">Member Name</h3>
-              <div class="flex gap-2 mt-2">
-                <span class="px-3 py-1 rounded-full border border-gray-500 text-sm text-gray-300"
-                  id="team-member-role">ROLE</span>
-              </div>
-            </div>
-            <div class="mt-8 flex gap-4">
-              <div
-                class="team-nav-btn team-prev cursor-pointer border border-gray-500 rounded-full p-3 hover:bg-white hover:text-black transition">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
-                </svg>
-              </div>
-              <div
-                class="team-nav-btn team-next cursor-pointer border border-gray-500 rounded-full p-3 hover:bg-white hover:text-black transition">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right Side: Swiper Slider -->
-          <div class="w-full md:w-1/2 h-[500px] relative">
-            <div class="swiper teamSwiper h-full w-full">
-              <div class="swiper-wrapper">
-                <!-- Slide 1 -->
-                <div class="swiper-slide team-slide cursor-pointer" data-name="Carolyn Severson" data-role="Chairperson"
-                  data-image="1[1].jpg"
-                  data-bio="Carolyn is a visionary leader with over 10 years of experience in organizing large-scale tech events. She is passionate about fostering innovation and collaboration within the student community."
-                  data-experience="10" data-projects="15" data-rating="4.9">
-                  <img src="1[1].jpg" alt="Team Member 1"
-                    class="w-full h-full object-cover rounded-lg shadow-2xl pointer-events-none">
-                </div>
-                <!-- Slide 2 -->
-                <div class="swiper-slide team-slide cursor-pointer" data-name="Dr. Smith" data-role="Vice Chair"
-                  data-image="1[1].jpg"
-                  data-bio="Dr. Smith specializes in Artificial Intelligence and has guided numerous research projects. He brings a wealth of technical knowledge and academic rigorousness to the committee."
-                  data-experience="8" data-projects="22" data-rating="4.8">
-                  <img src="1[1].jpg" alt="Team Member 2"
-                    class="w-full h-full object-cover rounded-lg shadow-2xl pointer-events-none">
-                </div>
-                <!-- Slide 3 -->
-                <div class="swiper-slide team-slide cursor-pointer" data-name="Jane Doe" data-role="Secretary"
-                  data-image="1[1].jpg"
-                  data-bio="Jane is the organizational backbone of the team, ensuring smooth communication and efficient workflow. Her attention to detail is unmatched."
-                  data-experience="5" data-projects="12" data-rating="4.7">
-                  <img src="1[1].jpg" alt="Team Member 3"
-                    class="w-full h-full object-cover rounded-lg shadow-2xl pointer-events-none">
-                </div>
-                <!-- Slide 4 -->
-                <div class="swiper-slide team-slide cursor-pointer" data-name="John Doe" data-role="Treasurer"
-                  data-image="1[1].jpg"
-                  data-bio="John manages the finances with precision and integrity. He has a background in financial planning and ensures resources are allocated effectively."
-                  data-experience="4" data-projects="08" data-rating="4.6">
-                  <img src="1[1].jpg" alt="Team Member 4"
-                    class="w-full h-full object-cover rounded-lg shadow-2xl pointer-events-none">
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!-- Team Committee Section End -->
-
-    <!-- Team Member Details Modal -->
-    <div id="team-modal" class="fixed inset-0 z-[100] hidden opacity-0 transition-opacity duration-500">
-      <!-- Backdrop -->
-      <div class="absolute inset-0 bg-black bg-opacity-80 backdrop-blur-sm" id="modal-backdrop"></div>
-
-      <!-- Modal Content -->
-      <div class="absolute inset-0 flex items-center justify-center p-4 md:p-8 pointer-events-none">
-        <div
-          class="bg-[#f0f0e6] w-full h-full max-w-7xl max-h-[90vh] rounded-[40px] overflow-hidden shadow-2xl flex flex-col md:flex-row pointer-events-auto transform scale-95 transition-transform duration-500"
-          id="modal-content">
-
-          <!-- Close Button -->
-          <button id="modal-close"
-            class="absolute top-6 right-8 z-50 text-gray-800 hover:text-black transition transform hover:rotate-90">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-10 h-10">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-
-          <!-- Left Side: Image -->
-          <div class="w-full md:w-1/2 h-1/2 md:h-full relative bg-gray-200" id="modal-img-container">
-            <img id="modal-img" src="" alt="Team Member" class="w-full h-full object-cover object-center">
-          </div>
-
-          <!-- Right Side: Info -->
-          <div
-            class="w-full md:w-1/2 h-1/2 md:h-full bg-[#dnd9cd] flex flex-col justify-center p-8 md:p-16 relative nav-bg-pattern">
-
-            <!-- Badge -->
-            <!-- <div class="absolute top-8 right-8 md:top-16 md:right-16 animate-spin-slow hidden md:block modal-element">
-              <svg viewBox="0 0 100 100" width="120" height="120">
-                <path id="curve" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent" />
-                <text width="100">
-                  <textPath xlink:href="#curve" fill="#555" text-anchor="middle" startOffset="50%"
-                    class="text-[10px] tracking-widest uppercase font-bold">
-                    • Connect • Collaborate • Create
-                  </textPath>
-                </text>
-              </svg>
-              <div class="absolute inset-0 flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#555"
-                  class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-                </svg>
-              </div>
-            </div> -->
-
-            <div class="mb-2 modal-element" id="modal-role-badge">
-              <span
-                class="inline-block px-4 py-1 rounded-full border border-gray-600 text-gray-700 text-sm font-semibold uppercase tracking-wider"
-                id="modal-role">Role</span>
-            </div>
-
-            <h2 class="text-5xl md:text-7xl text-gray-900 mb-6 leading-tight modal-element" id="modal-name">
-              Member Name
-            </h2>
-
-            <p class="text-gray-700 text-lg md:text-xl leading-relaxed mb-12 max-w-md modal-element" id="modal-bio">
-              Bio description goes here.
-            </p>
-
-            <!-- Stats -->
-            <!-- <div class="flex gap-12 mt-auto border-t border-gray-400 pt-8 modal-element" id="modal-stats">
-              <div>
-                <p class="text-4xl md:text-5xl text-gray-900" id="modal-experience">0</p>
-                <p class="text-sm text-gray-600 uppercase tracking-wide mt-1">Years Exp.</p>
-              </div>
-              <div>
-                <p class="text-4xl md:text-5xl text-gray-900" id="modal-projects">0</p>
-                <p class="text-sm text-gray-600 uppercase tracking-wide mt-1">Projects</p>
-              </div>
-              <div>
-                <p class="text-4xl md:text-5xl text-gray-900" id="modal-rating">0.0</p>
-                <p class="text-sm text-gray-600 uppercase tracking-wide mt-1">Rating</p>
-              </div>
-            </div> -->
-
-          </div>
-        </div>
-      </div>
-    </div>
 
     <!-- ===== Prizes & Benefits Section Start ===== -->
-<section id="prizes" class="py-20 relative z-10 text-center">
-  <h2 class="text-4xl font-bold mb-4 glow-text text-indigo-400">
-    Prizes & Benefits
-  </h2>
-  <p class="text-gray-300 mb-12">
-    Compete. Win. Get Recognized.
-  </p>
-
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-8">
-
-    <!-- Winner -->
-    <div class="prize-card p-6 rounded-xl">
-      <div class="text-5xl mb-4 text-yellow-400">
-        <i class="fas fa-trophy"></i>
-      </div>
-      <h3 class="text-xl font-bold mb-2">Winner</h3>
-      <p class="text-gray-300 text-sm">
-        Cash Prize + Trophy + Certificate + Recognition on IEEE Platforms
+    <section id="prizes" class="py-20 relative z-10 text-center">
+      <h2 class="text-4xl font-bold mb-4 glow-text text-indigo-400">
+        Prizes & Benefits
+      </h2>
+      <p class="text-gray-300 mb-12">
+        Compete. Win. Get Recognized.
       </p>
-    </div>
 
-    <!-- Runner Up -->
-    <div class="prize-card p-6 rounded-xl">
-      <div class="text-5xl mb-4 text-gray-300">
-        <i class="fas fa-medal"></i>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-8">
+
+        <!-- Winner -->
+        <div class="prize-card p-6 rounded-xl">
+          <div class="text-5xl mb-4 text-yellow-400">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Winner</h3>
+          <p class="text-gray-300 text-sm">
+            Winning Certificate + Recognition on IEEE Platforms
+          </p>
+        </div>
+
+        <!-- Runner Up -->
+        <div class="prize-card p-6 rounded-xl">
+          <div class="text-5xl mb-4 text-gray-300">
+            <i class="fas fa-medal"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Runner-Up</h3>
+          <p class="text-gray-300 text-sm">
+            Runner Up Certificate + Special Mention
+          </p>
+        </div>
+
+        <!-- Special Mentions -->
+        <div class="prize-card p-6 rounded-xl">
+          <div class="text-5xl mb-4 text-pink-400">
+            <i class="fas fa-star"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Special Mentions</h3>
+          <p class="text-gray-300 text-sm">
+            Exciting Goodies + Certificate of Excellence
+          </p>
+        </div>
+
+        <!-- Participation -->
+        <div class="prize-card p-6 rounded-xl">
+          <div class="text-5xl mb-4 text-cyan-400">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">All Participants</h3>
+          <p class="text-gray-300 text-sm">
+            Participation Certificate + Networking + Exposure
+          </p>
+        </div>
+
       </div>
-      <h3 class="text-xl font-bold mb-2">Runner-Up</h3>
-      <p class="text-gray-300 text-sm">
-        Cash Prize + Certificate + Special Mention
-      </p>
-    </div>
-
-    <!-- Special Mentions -->
-    <div class="prize-card p-6 rounded-xl">
-      <div class="text-5xl mb-4 text-pink-400">
-        <i class="fas fa-star"></i>
-      </div>
-      <h3 class="text-xl font-bold mb-2">Special Mentions</h3>
-      <p class="text-gray-300 text-sm">
-        Exciting Goodies + Certificate of Excellence
-      </p>
-    </div>
-
-    <!-- Participation -->
-    <div class="prize-card p-6 rounded-xl">
-      <div class="text-5xl mb-4 text-cyan-400">
-        <i class="fas fa-certificate"></i>
-      </div>
-      <h3 class="text-xl font-bold mb-2">All Participants</h3>
-      <p class="text-gray-300 text-sm">
-        Participation Certificate + Networking + Exposure
-      </p>
-    </div>
-
-  </div>
-</section>
-<!-- ===== Prizes & Benefits Section End ===== -->
+    </section>
+    <!-- ===== Prizes & Benefits Section End ===== -->
 
 
     <section id="faq" class="py-16 relative z-10 text-center">
