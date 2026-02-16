@@ -62,7 +62,7 @@ body {
 }
 
 .nav-logo {
-  height: 80px; /* Increased size */
+  height: 60px; /* Increased size */
   width: auto;
   filter: drop-shadow(0 0 20px rgba(255, 107, 0, 0.8));
   transition: all 0.3s ease;
@@ -280,7 +280,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 @keyframes floatLogo {
@@ -297,11 +297,13 @@ body {
 }
 
 .hero-logo {
-  width: 420px; /* Increase size */
+  width: 820px; /* Increase size */
   max-width: 90%;
   height: auto;
   margin: 0 auto;
   display: block;
+  animation: floatLogo 6s ease-in-out infinite;
+  will-change: transform;
 
   /* Make it look premium */
   filter: drop-shadow(0 0 25px rgba(255, 107, 0, 0.6));
@@ -309,7 +311,7 @@ body {
 }
 
 .hero-logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) rotate(2deg);
 }
 
 .hero-title {
@@ -328,6 +330,7 @@ body {
   -webkit-text-fill-color: transparent;
   margin-bottom: 1.5rem;
   animation: titleGlow 3s ease-in-out infinite;
+  
 }
 
 @keyframes titleGlow {

@@ -144,7 +144,7 @@ var swiper = new Swiper(".mySwiper", {
     disableOnInteraction: false,
     pauseOnMouseEnter: true,
   },
-  speed: 1000,
+  speed: 100,
   loop: true,
   grabCursor: true,
   breakpoints: {
@@ -235,7 +235,7 @@ const eventDetails = {
     showRegistration: true,
   },
   gamesgala: {
-    title: "GAMES GALA",
+    title: "GAME GALA",
     time: "1:00 PM - 3:00 PM",
     location: "M & N Block",
     team: "Individual & team",
@@ -280,7 +280,7 @@ const eventDetails = {
   },
   cultural: {
     title: "Cultural Evening",
-    time: "4:00 PM - 6:00 PM",
+    time: "4:00 PM - 5:30 PM",
     location: "M & N Block",
     team: "Open to All",
     description:
@@ -295,7 +295,7 @@ const eventDetails = {
       "Organize your own group performances (subject to approval)",
       "No inappropriate behavior will be tolerated",
     ],
-    prizes: "Best Performer Awards + Exciting Goodies + Unforgettable Memories",
+    prizes: "Unstoppable Energy + Unforgettable Memories",
     prizeHeading: "What to Expect",
     registrationLink: "",
     showRegistration: false,
@@ -505,7 +505,7 @@ console.log(
   "color: #ff6b00; font-size: 24px; font-weight: bold;",
 );
 console.log(
-  "%cBuilt with ❤️ by the IEEE Student Branch",
+  "%cBuilt with ❤️ by the IEEE VGEC Student Branch",
   "color: #8a2be2; font-size: 14px;",
 );
 console.log(
