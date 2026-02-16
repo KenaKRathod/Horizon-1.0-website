@@ -183,12 +183,15 @@ const eventDetails = {
       text: "HUNT-A-THON Rulebook",
       link: "./rulebooks/huntathon.pdf"
     },
-    prizes: "Winner: Cash Prize + Trophy | Runner-Up: Cash Prize + Certificate"
+    prizes: "Winner & Runner Up prizes and Certificates",
+    prizeHeading: "Prizes & Recognition",
+    registrationLink: "https://surveymars.com/q/l0irlhczM",
+    showRegistration: true
   },
   techtalk: {
     title: "Tech Talk",
     time: "11:00 AM - 1:00 PM",
-    location: "Auditorium",
+    location: "A-Block Auditorium",
     team: "Individual",
     description: "Get inspired by industry experts and tech leaders! Learn about the latest trends in technology, career opportunities, and innovations shaping the future. Interactive Q&A sessions provide direct access to professionals in the field.",
     rules: [
@@ -199,12 +202,15 @@ const eventDetails = {
       "No recording without permission",
       "Certificate of attendance provided to all participants"
     ],
-    prizes: "Knowledge + Networking Opportunities + Certificates"
+    prizes: "Knowledge + Networking Opportunities + Certificates",
+    prizeHeading: "What You'll Gain",
+    registrationLink: "https://surveymars.com/q/NPBifkZgV",
+    showRegistration: true
   },
   stalls: {
     title: "Food & Non-Food Stalls",
-    time: "12:00 PM - 6:00 PM",
-    location: "Main Campus Ground",
+    time: "1:00 PM - 3:00 PM",
+    location: "M & N Block",
     team: "Open to All",
     description: "Explore a variety of delicious food options and exciting merchandise! From traditional snacks to modern cuisines, tech gadgets to custom merchandise - find everything you need to make your fest experience complete.",
     rules: [
@@ -215,13 +221,16 @@ const eventDetails = {
       "Report any issues to the organizing committee",
       "Vendors must comply with health and safety standards"
     ],
-    prizes: "Great Food + Cool Merchandise + Memories"
+    prizes: "Great Food + Cool Merchandise + Memories",
+    prizeHeading: "What's Available",
+    registrationLink: "https://forms.gle/2vqVdxHhLuXEHs1s8",
+    showRegistration: true
   },
   gamesgala: {
     title: "GAMES GALA",
-    time: "2:00 PM - 4:00 PM",
-    location: "Activity Zone",
-    team: "Individual",
+    time: "1:00 PM - 3:00 PM",
+    location: "M & N Block",
+    team: "Individual & team",
     description: "Fast-paced, fun-filled minute to win it games...",
     rules: [
       "Individual participation in most games",
@@ -235,12 +244,15 @@ const eventDetails = {
       text: "GAME GALA Rulebook",
       link: "./rulebooks/gamesgala.pdf"
     },
-    prizes: "Winners: Exciting Prizes + Certificates | All: Fun Memories"
+    prizes: "Winners: Exciting Prizes & cute goodies | All: Fun Memories",
+    prizeHeading: "Prizes & Recognition",
+    registrationLink: "https://surveymars.com/q/dnhD6HmBu",
+    showRegistration: true
   },
   thinkbits: {
     title: "THINK BITS",
-    time: "2:00 PM - 4:00 PM",
-    location: "Computer Lab",
+    time: "3:00 PM - 5:00 PM",
+    location: "M-Block",
     team: "Individual/Teams",
     description: "Put your technical knowledge to the test!",
     rules: [
@@ -253,12 +265,15 @@ const eventDetails = {
       text: "THINK BITS Rulebook",
       link: "./rulebooks/thinkbits.pdf"
     },
-    prizes: "Winners: Prizes + Certificates"
+    prizes: "Winners: Prizes + Certificates",
+    prizeHeading: "Prizes & Recognition",
+    registrationLink: "https://surveymars.com/q/dnhD6HmBu",
+    showRegistration: true
   },
   cultural: {
     title: "Cultural Evening",
-    time: "6:00 PM - 10:00 PM",
-    location: "Main Ground",
+    time: "4:00 PM - 6:00 PM",
+    location: "M & N Block",
     team: "Open to All",
     description: "End the fest with music, dance, and celebration! Enjoy live jamming sessions and traditional Garba. Whether you want to perform or just vibe with the crowd, this is the perfect finale to an amazing day!",
     rules: [
@@ -271,7 +286,10 @@ const eventDetails = {
       "Organize your own group performances (subject to approval)",
       "No inappropriate behavior will be tolerated"
     ],
-    prizes: "Best Performer Awards + Exciting Goodies + Unforgettable Memories"
+    prizes: "Best Performer Awards + Exciting Goodies + Unforgettable Memories",
+    prizeHeading: "What to Expect",
+    registrationLink: "",
+    showRegistration: false
   }
 };
 
@@ -282,56 +300,61 @@ function openEventModal(eventKey) {
 
   if (!event) return;
 
- modalContent.innerHTML = `
-  <h2>${event.title}</h2>
-  
-  <div class="event-meta">
-    <div class="meta-item">
-      <i class="fas fa-clock"></i>
-      <span>${event.time}</span>
+  modalContent.innerHTML = `
+    <h2>${event.title}</h2>
+    
+    <div class="event-meta">
+      <div class="meta-item">
+        <i class="fas fa-clock"></i>
+        <span>${event.time}</span>
+      </div>
+      <div class="meta-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>${event.location}</span>
+      </div>
+      <div class="meta-item">
+        <i class="fas fa-users"></i>
+        <span>${event.team}</span>
+      </div>
     </div>
-    <div class="meta-item">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>${event.location}</span>
-    </div>
-    <div class="meta-item">
-      <i class="fas fa-users"></i>
-      <span>${event.team}</span>
-    </div>
-  </div>
 
-  <h3>About This Event</h3>
-  <p>${event.description}</p>
+    <h3>About This Event</h3>
+    <p>${event.description}</p>
 
-  <h3>Rules & Guidelines</h3>
-  <ul>
-    ${event.rules.map(rule => `<li><i class="fas fa-check-circle"></i> ${rule}</li>`).join('')}
-  </ul>
+    <h3>Rules & Guidelines</h3>
+    <ul>
+      ${event.rules.map(rule => `<li><i class="fas fa-check-circle"></i> ${rule}</li>`).join('')}
+    </ul>
 
-  ${
-  event.rulebook
-    ? `
-      <h3>Rulebook</h3>
-      <p>Find the detailed rulebook below:</p>
-      <a href="${event.rulebook.link}" 
-         target="_blank" 
-         class="modal-register-btn">
-        <span>${event.rulebook.text}</span>
-        <i class="fas fa-file-pdf"></i>
-      </a>
-    `
-    : ''
-  }
+    ${
+    event.rulebook
+      ? `
+        <h3>Rulebook</h3>
+        <p>Find the detailed rulebook below:</p>
+        <a href="${event.rulebook.link}" 
+           target="_blank" 
+           class="modal-register-btn">
+          <span>${event.rulebook.text}</span>
+          <i class="fas fa-file-pdf"></i>
+        </a>
+      `
+      : ''
+    }
 
-  <h3>Prizes & Recognition</h3>
-  <p>${event.prizes}</p>
+    <h3>${event.prizeHeading}</h3>
+    <p>${event.prizes}</p>
 
-  <a href="https://surveymars.com/your-form" target="_blank" class="modal-register-btn">
-    <span>Register for this Event</span>
-    <i class="fas fa-arrow-right"></i>
-  </a>
-`;
-
+    ${
+    event.showRegistration
+      ? `
+        <a href="${event.registrationLink}" target="_blank" class="modal-register-btn">
+          <span>Register for this Event</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      `
+      : ''
+    }
+  `;
 
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
