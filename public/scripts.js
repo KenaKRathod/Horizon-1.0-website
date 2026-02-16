@@ -166,10 +166,10 @@ var swiper = new Swiper(".mySwiper", {
 const eventDetails = {
   huntathon: {
     title: "HUNT-A-THON",
-    time: "10:00 AM - 1:00 PM",
-    location: "VGEC Campus",
+    time: "9:00 AM - 10:30 PM",
+    location: "VGEC Campus(A-Block)",
     team: "Teams of 4",
-    description: "The ultimate treasure hunt experience! Navigate through challenging clues, solve exciting puzzles, and race against time to find hidden treasures across the campus. Test your teamwork, problem-solving skills, and strategic thinking in this thrilling adventure!",
+    description: "The ultimate treasure hunt experience! Navigate through challenging clues, solve exciting puzzles, and race against time...",
     rules: [
       "Teams must consist of exactly 4 members",
       "Registration fee: ₹100 per team",
@@ -179,6 +179,10 @@ const eventDetails = {
       "Time limit will be strictly enforced",
       "First team to complete all challenges wins"
     ],
+    rulebook: {
+      text: "HUNT-A-THON Rulebook",
+      link: "./rulebooks/huntathon.pdf"
+    },
     prizes: "Winner: Cash Prize + Trophy | Runner-Up: Cash Prize + Certificate"
   },
   techtalk: {
@@ -218,16 +222,19 @@ const eventDetails = {
     time: "2:00 PM - 4:00 PM",
     location: "Activity Zone",
     team: "Individual",
-    description: "Fast-paced, fun-filled minute to win it games! Test your speed, agility, and precision in exciting challenges. From balloon pop to cookie face, paper plane challenge to blind drawing - compete for prizes and bragging rights!",
+    description: "Fast-paced, fun-filled minute to win it games...",
     rules: [
       "Individual participation in most games",
       "Free entry for all registered participants",
-      "Each game has a specific time limit (usually 60 seconds)",
-      "No retries unless specified by organizers",
-      "Follow game-specific rules announced by coordinators",
-      "Winners determined based on completion time or points",
-      "Multiple game stations will be running simultaneously"
+      "Each game has a specific time limit",
+      "No retries unless specified",
+      "Follow game-specific rules",
+      "Winners based on points or time"
     ],
+    rulebook: {
+      text: "GAME GALA Rulebook",
+      link: "./rulebooks/gamesgala.pdf"
+    },
     prizes: "Winners: Exciting Prizes + Certificates | All: Fun Memories"
   },
   thinkbits: {
@@ -235,17 +242,18 @@ const eventDetails = {
     time: "2:00 PM - 4:00 PM",
     location: "Computer Lab",
     team: "Individual/Teams",
-    description: "Put your technical knowledge to the test! Engage in brain-teasing technical games including Logo Quiz, Binary Bingo, Tech Pictionary, and more. Challenge your logic, problem-solving abilities, and tech expertise.",
+    description: "Put your technical knowledge to the test!",
     rules: [
-      "Can participate individually or in teams based on the game",
-      "Free entry for all students",
-      "Each game has specific rules that will be explained before starting",
-      "No use of phones or external resources during challenges",
-      "Points awarded based on accuracy and speed",
-      "Decisions of judges are final",
-      "Certificates for top performers in each game"
+      "Individual or team participation",
+      "No phones allowed",
+      "Points based on speed & accuracy",
+      "Judges decision final"
     ],
-    prizes: "Winners: Prizes + Certificates | Top Performers: Recognition"
+    rulebook: {
+      text: "THINK BITS Rulebook",
+      link: "./rulebooks/thinkbits.pdf"
+    },
+    prizes: "Winners: Prizes + Certificates"
   },
   cultural: {
     title: "Cultural Evening",
@@ -274,40 +282,56 @@ function openEventModal(eventKey) {
 
   if (!event) return;
 
-  modalContent.innerHTML = `
-    <h2>${event.title}</h2>
-    
-    <div class="event-meta">
-      <div class="meta-item">
-        <i class="fas fa-clock"></i>
-        <span>${event.time}</span>
-      </div>
-      <div class="meta-item">
-        <i class="fas fa-map-marker-alt"></i>
-        <span>${event.location}</span>
-      </div>
-      <div class="meta-item">
-        <i class="fas fa-users"></i>
-        <span>${event.team}</span>
-      </div>
+ modalContent.innerHTML = `
+  <h2>${event.title}</h2>
+  
+  <div class="event-meta">
+    <div class="meta-item">
+      <i class="fas fa-clock"></i>
+      <span>${event.time}</span>
     </div>
+    <div class="meta-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>${event.location}</span>
+    </div>
+    <div class="meta-item">
+      <i class="fas fa-users"></i>
+      <span>${event.team}</span>
+    </div>
+  </div>
 
-    <h3>About This Event</h3>
-    <p>${event.description}</p>
+  <h3>About This Event</h3>
+  <p>${event.description}</p>
 
-    <h3>Rules & Guidelines</h3>
-    <ul>
-      ${event.rules.map(rule => `<li><i class="fas fa-check-circle"></i> ${rule}</li>`).join('')}
-    </ul>
+  <h3>Rules & Guidelines</h3>
+  <ul>
+    ${event.rules.map(rule => `<li><i class="fas fa-check-circle"></i> ${rule}</li>`).join('')}
+  </ul>
 
-    <h3>Prizes & Recognition</h3>
-    <p>${event.prizes}</p>
+  ${
+  event.rulebook
+    ? `
+      <h3>Rulebook</h3>
+      <p>Find the detailed rulebook below:</p>
+      <a href="${event.rulebook.link}" 
+         target="_blank" 
+         class="modal-register-btn">
+        <span>${event.rulebook.text}</span>
+        <i class="fas fa-file-pdf"></i>
+      </a>
+    `
+    : ''
+  }
 
-    <a href="https://surveymars.com/your-form" target="_blank" class="modal-register-btn">
-      <span>Register for this Event</span>
-      <i class="fas fa-arrow-right"></i>
-    </a>
-  `;
+  <h3>Prizes & Recognition</h3>
+  <p>${event.prizes}</p>
+
+  <a href="https://surveymars.com/your-form" target="_blank" class="modal-register-btn">
+    <span>Register for this Event</span>
+    <i class="fas fa-arrow-right"></i>
+  </a>
+`;
+
 
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
