@@ -191,16 +191,16 @@ const eventDetails = {
     },
     prizes: "Winner & Runner Up prizes and Certificates",
     prizeHeading: "Prizes & Recognition",
-    registrationLink: "https://surveymars.com/q/l0irlhczM",
+    registrationLink: "https://surveymars.com/q/itfn9Zs9C",
     showRegistration: true,
   },
   techtalk: {
-    title: "Tech Talk",
+    title: "Tech Talk - DRDO Expert Session",
     time: "11:00 AM - 1:00 PM",
     location: "A-Block Auditorium",
     team: "Individual",
     description:
-      "Get inspired by industry experts and tech leaders! Learn about the latest trends in technology, career opportunities, and innovations shaping the future. Interactive Q&A sessions provide direct access to professionals in the field.",
+      "Discover the world of intelligence gathering with DRDO expert TATSAT THAKORE in 'Mapping the Invisible: Geospatial OSINT.'' Learn how open-source intelligence and geospatial technologies reveal hidden patterns and extract actionable insights from publicly available data. Explore cutting-edge techniques that transform satellite imagery, digital footprints, and location data into powerful investigative tools used by defense and intelligence professionals. Perfect for anyone interested in cybersecurity, defense technology, or intelligence analysis. Join this interactive session for a rare glimpse into methods that uncover what's hidden in plain sight!",
     rules: [
       "Free entry for all students",
       "Register in advance to reserve your seat",
@@ -211,7 +211,7 @@ const eventDetails = {
     ],
     prizes: "Knowledge + Networking Opportunities + Certificates",
     prizeHeading: "What You'll Gain",
-    registrationLink: "https://surveymars.com/q/NPBifkZgV",
+    registrationLink: "https://surveymars.com/q/iM9Cfnlks",
     showRegistration: true,
   },
   stalls: {
