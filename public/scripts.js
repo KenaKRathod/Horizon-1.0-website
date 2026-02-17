@@ -287,12 +287,10 @@ const eventDetails = {
       "End the fest with music, dance, and celebration! Enjoy live jamming sessions and traditional Garba. Whether you want to perform or just vibe with the crowd, this is the perfect finale to an amazing day!",
     rules: [
       "Entry with valid college ID only",
-      "Traditional attire encouraged for Garba",
-      "Performers must register in advance",
+      "Wear comfortable clothes for Garba",
       "Follow event timings strictly",
       "Maintain decorum and respect cultural values",
       "Photography allowed in designated areas",
-      "Organize your own group performances (subject to approval)",
       "No inappropriate behavior will be tolerated",
     ],
     prizes: "Unstoppable Energy + Unforgettable Memories",

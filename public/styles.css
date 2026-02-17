@@ -1772,20 +1772,27 @@ body {
 /* ==================== RESPONSIVE DESIGN ==================== */
 @media (max-width: 968px) {
   .timeline::before {
-    left: 30px;
+    left: 20px;
   }
 
   .timeline-item {
     width: 100%;
     left: 0 !important;
-    padding: 1.5rem 1.5rem 1.5rem 5rem;
+    padding: 0.8rem 1rem 0.8rem 3.5rem; /* Reduced padding for less height */
     text-align: left;
+    min-height: unset; /* Remove min-height on mobile */
   }
 
   .timeline-item.left,
   .timeline-item.right {
     left: 0;
     text-align: left;
+  }
+
+  .timeline-content {
+    padding: 1rem 1.2rem; /* Reduced padding for less height */
+    min-height: unset; /* Remove min-height on mobile */
+    width: 100%; /* Full width cards */
   }
 
   .nav-container {
