@@ -230,7 +230,7 @@ const eventDetails = {
       "Vendors must comply with health and safety standards",
     ],
     prizes: "Great Food + Cool Merchandise + Memories",
-    prizeHeading: "What's Available",
+    prizeHeading: "Register to set up a stall.",
     registrationLink: "https://forms.gle/2vqVdxHhLuXEHs1s8",
     showRegistration: true,
   },
