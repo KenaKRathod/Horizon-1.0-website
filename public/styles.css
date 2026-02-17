@@ -475,7 +475,9 @@ body {
   gap: 2.5rem;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center; /* Added for better vertical alignment */
   padding: 2rem;
+  width: 100%; /* Ensure full width */
 }
 
 .time-card {
@@ -530,6 +532,8 @@ body {
   left: 0;
   transform: rotate(-90deg);
   filter: drop-shadow(0 0 10px rgba(255, 107, 0, 0.5));
+  width: 180px;
+  height: 180px;
 }
 
 .progress-bg {
@@ -1791,10 +1795,12 @@ body {
 
 @media (max-width: 768px) {
   .countdown-container {
-    gap: 1.5rem;
-    padding: 1.5rem 1rem; /* Added padding for better spacing */
-    justify-content: center; /* Ensure items are centered */
-    align-items: center; /* Vertical alignment */
+    gap: 1.2rem;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 
   .time-card {
@@ -1805,6 +1811,24 @@ body {
   .progress-ring {
     width: 140px;
     height: 140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  .progress-bg,
+  .progress-circle {
+    cx: 70;
+    cy: 70;
+    r: 62;
+  }
+
+  .time-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 8px;
   }
 
   .time-content h2 {
@@ -1873,12 +1897,13 @@ body {
 @media (max-width: 480px) {
   .countdown-container {
     gap: 1rem;
-    padding: 1.5rem 0.5rem; /* Adjusted padding */
-    display: grid; /* Change to grid for better control */
-    grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
-    justify-items: center; /* Center items in grid */
-    max-width: 300px; /* Limit width for better alignment */
-    margin: 0 auto; /* Center the container */
+    padding: 1.5rem 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 280px;
+    margin: 0 auto;
   }
 
   .time-card {
@@ -1889,13 +1914,24 @@ body {
   .progress-ring {
     width: 120px;
     height: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
   }
 
   .progress-bg,
   .progress-circle {
-    r: 50;
     cx: 60;
     cy: 60;
+    r: 52;
+  }
+
+  .time-content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 5px;
   }
 
   .time-content h2 {
@@ -1903,7 +1939,8 @@ body {
   }
 
   .time-content p {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
   }
 
   .countdown-title {
@@ -1929,10 +1966,9 @@ body {
   }
 }
 
-/* Extra small screens - single column countdown */
+/* Extra small screens - tighter layout */
 @media (max-width: 360px) {
   .countdown-container {
-    grid-template-columns: repeat(2, 110px); /* Even smaller for tiny screens */
     gap: 0.8rem;
     max-width: 250px;
   }
@@ -1949,9 +1985,9 @@ body {
 
   .progress-bg,
   .progress-circle {
-    r: 45;
     cx: 55;
     cy: 55;
+    r: 47;
   }
 
   .time-content h2 {
@@ -1959,7 +1995,8 @@ body {
   }
 
   .time-content p {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.5px;
   }
 }
 
