@@ -259,7 +259,7 @@ const eventDetails = {
   },
   thinkbits: {
     title: "THINK BITS",
-    time: "3:00 PM - 5:00 PM",
+    time: "3:00 PM - 4:30 PM",
     location: "M-Block",
     team: "Individual/Teams",
     description: "Put your technical knowledge to the test!",
@@ -280,7 +280,7 @@ const eventDetails = {
   },
   cultural: {
     title: "Cultural Evening",
-    time: "4:00 PM - 5:30 PM",
+    time: "4:30 PM - 5:30 PM",
     location: "M & N Block",
     team: "Open to All",
     description:
