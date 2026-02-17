@@ -241,6 +241,7 @@ const eventDetails = {
     team: "Individual & team",
     description: "Fast-paced, fun-filled minute to win it games...",
     rules: [
+      "Attention : One single pass (₹50) gives you access to BOTH ThinkBits (tech games) and Game Gala (stall games)! 🎮🔥",
       "Individual participation in most games",
       "Free entry for all registered participants",
       "Each game has a specific time limit",
@@ -264,6 +265,7 @@ const eventDetails = {
     team: "Individual/Teams",
     description: "Put your technical knowledge to the test!",
     rules: [
+      "Attention : One single pass (₹50) gives you access to BOTH ThinkBits (tech games) and Game Gala (stall games)! 🎮🔥",
       "Individual or team participation",
       "No phones allowed",
       "Points based on speed & accuracy",
