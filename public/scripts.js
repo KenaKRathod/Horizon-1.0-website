@@ -512,3 +512,9 @@ console.log(
   "%cInterested in the code? Join our tech team!",
   "color: #ff6b00; font-size: 12px;",
 );
+
+function closePartnerPopup() {
+  document.getElementById("partnerPopup").style.display = "none";
+}
+
+
